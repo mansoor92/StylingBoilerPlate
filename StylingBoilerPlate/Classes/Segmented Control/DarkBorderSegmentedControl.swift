@@ -24,20 +24,30 @@ public class DarkBorderSegmentedControl: UISegmentedControl {
     
     //setup
     func setup()  {
-        sharpCornersStyle(normalBackgroudColor: UIColor.clear, selectedBackggroundColor: UIColor.appColor(color: .Secondary), tintColor: UIColor.appColor(color: .Dark), selectedTextColor: UIColor.appColor(color: .Light))
+        sharpCornersStyle(normalBackgroudColor: UIColor.clear, selectedBackggroundColor: UIColor.appColor(color: .Secondary), tintColor: UIColor.appColor(color: .Secondary), selectedTextColor: UIColor.appColor(color: .Light))
     }
     
     func sharpCornersStyle(normalBackgroudColor:UIColor,selectedBackggroundColor:UIColor,tintColor:UIColor,selectedTextColor:UIColor) {
-        self.setBackgroundImage(UIImage.getImageFromColor(color: normalBackgroudColor, size: CGSize(width: 200, height: 200)), for: UIControlState.normal, barMetrics: .default)
+        
+//        let img = UIImage.getImageFromColor(color: normalBackgroudColor, size: CGSize(width: 200, height: 200))
+//        self.setBackgroundImage(img, for: UIControlState.normal, barMetrics: .default)
+        
+//        self.setBackgroundImage(UIImage.getImageFromColor(color: selectedBackggroundColor, size: CGSize(width: 200, height: 200)), for: UIControlState.selected, barMetrics: .default)
+        
         self.tintColor = tintColor
-        self.setBackgroundImage(UIImage.getImageFromColor(color: selectedBackggroundColor, size: CGSize(width: 200, height: 200)), for: UIControlState.selected, barMetrics: .default)
+        
+        let img = UIImage.getImageFromColor(color: UIColor.init(netHex: 0x979797), size: CGSize(width: 1, height: self.frame.size.height))
+        self.setDividerImage(img, forLeftSegmentState: .normal, rightSegmentState: .normal, barMetrics: .default)
+        
         let titleTextAttributes = [NSForegroundColorAttributeName: selectedTextColor]
         self.setTitleTextAttributes(titleTextAttributes, for: .selected)
+        self.setTitleTextAttributes(titleTextAttributes, for: .normal)
+        
         self.backgroundColor = normalBackgroudColor
-        self.layer.cornerRadius = 0
+        
         self.layer.borderWidth = 1
         self.layer.cornerRadius = 5
-        self.layer.borderColor = tintColor.cgColor
+        self.layer.borderColor = UIColor.init(netHex: 0x979797).cgColor
     }
     
 

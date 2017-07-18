@@ -23,53 +23,72 @@ public class AppLabel: UILabel{
     }
 }
 
-public class TitleLabel: AppLabel {
-    public override func awakeFromNib() {
-        super.config(font: UIFont.appFont(font: .RubikRegular, pontSize: 18))
-    }
-}
+//public class BodyLabel: AppLabel {
+//    public override func awakeFromNib() {
+//        super.config(font: UIFont.appFont(font: .RubikRegular, pontSize: 12))
+//    }
+//}
 
-public class NavigationTitleLabel: AppLabel {
-    public override func awakeFromNib() {
-        super.config(font: UIFont.appFont(font: .RubikRegular, pontSize: 16))
-    }
-}
 
+//Login/Signup
 public class HeadlineLabel: AppLabel {
     public override func awakeFromNib() {
         super.config(font: UIFont.appFont(font: .RubikRegular, pontSize: 18))
     }
 }
 
+//Light Selected
 public class SubheadLabel: AppLabel {
     public override func awakeFromNib() {
-        super.config(font: UIFont.appFont(font: .RubikRegular, pontSize: 14))
-    }
-}
-
-public class BodyLabel: AppLabel {
-    public override func awakeFromNib() {
-        super.config(font: UIFont.appFont(font: .RubikRegular, pontSize: 12))
-    }
-}
-
-public class CalloutLabel: AppLabel {
-    public override func awakeFromNib() {
-        super.config(font: UIFont.appFont(font: .RubikRegular, pontSize: 18))
+        super.config(font: UIFont.appFont(font: .RubikBold, pontSize: 15))
     }
 }
 
 public class CaptionLabel: AppLabel {
     public override func awakeFromNib() {
-        super.config(font: UIFont.appFont(font: .RubikRegular, pontSize: 18))
+        super.config(font: UIFont.appFont(font: .RubikRegular, pontSize: 14))
     }
 }
 
-public class ShoutnoteLabel: AppLabel {
+public class NavigationTitleLabel: AppLabel {
     public override func awakeFromNib() {
-        super.config(font: UIFont.appFont(font: .RubikRegular, pontSize: 18))
+        super.config(font: UIFont.appFont(font: .RubikRegular, pontSize: 17))
     }
 }
+
+public class TitleLabel: AppLabel {
+    public override func awakeFromNib() {
+        super.config(font: UIFont.appFont(font: .RubikMedium, pontSize: 17))
+    }
+}
+
+public class TextLabel: AppLabel {
+    public override func awakeFromNib() {
+        super.config(font: UIFont.appFont(font: .RubikRegular, pontSize: 15))
+    }
+}
+
+//aka Dark Caption
+public class CalloutLabel: AppLabel {
+    public override func awakeFromNib() {
+        super.config(font: UIFont.appFont(font: .RubikRegular, pontSize: 12))
+    }
+}
+
+//Timers/counters
+public class ShoutnoteLabel: AppLabel {
+    public override func awakeFromNib() {
+        super.config(font: UIFont.appFont(font: .RubikMedium, pontSize: 48))
+    }
+}
+
+public class ShoutnoteSmallLabel: AppLabel {
+    public override func awakeFromNib() {
+        super.config(font: UIFont.appFont(font: .RubikMedium, pontSize: 36))
+    }
+}
+
+
 /*
 case R-R,L = 48(stats),18(home),16(invite friends earn more),14(jdoe@abc.com)
 case R-R,D = 18(invite friends),16(recurring),14(Mehram,Home,ride again with abc?,Paragraph),12(SAR 40-70,Cardholder name)

@@ -9,12 +9,17 @@
 /* Begin PBXBuildFile section */
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
-		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		9FD296DB88405DD35AC656F8 /* Pods_StylingBoilerPlate_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D77C93ECE5CAEE639842F50 /* Pods_StylingBoilerPlate_Example.framework */; };
 		DCB56082E5255F2EFEA51D9A /* Pods_StylingBoilerPlate_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A956C02B3C3DBB276A72E9E /* Pods_StylingBoilerPlate_Tests.framework */; };
+		ED41E16B1F1E421E00FE297B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED41E16A1F1E421E00FE297B /* Main.storyboard */; };
+		ED41E16E1F1E422F00FE297B /* ColorCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41E16D1F1E422F00FE297B /* ColorCollectionViewController.swift */; };
+		ED41E1701F1E423400FE297B /* ColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41E16F1F1E423400FE297B /* ColorCollectionViewCell.swift */; };
+		ED41E1751F1E424700FE297B /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED41E1721F1E424700FE297B /* Rubik-Bold.ttf */; };
+		ED41E1761F1E424700FE297B /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED41E1731F1E424700FE297B /* Rubik-Medium.ttf */; };
+		ED41E1771F1E424700FE297B /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED41E1741F1E424700FE297B /* Rubik-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,22 +36,27 @@
 		2D77C93ECE5CAEE639842F50 /* Pods_StylingBoilerPlate_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StylingBoilerPlate_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3545EEFE9D75BF9B8BD0BD49 /* Pods-StylingBoilerPlate_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StylingBoilerPlate_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StylingBoilerPlate_Tests/Pods-StylingBoilerPlate_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		3823EBC659A96FF631978FEE /* Pods-StylingBoilerPlate_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StylingBoilerPlate_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-StylingBoilerPlate_Example/Pods-StylingBoilerPlate_Example.release.xcconfig"; sourceTree = "<group>"; };
-		41FE8B4B92868B955190A790 /* StylingBoilerPlate.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = StylingBoilerPlate.podspec; path = ../StylingBoilerPlate.podspec; sourceTree = "<group>"; };
-		426344EB0981C0566D3D7627 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		41FE8B4B92868B955190A790 /* StylingBoilerPlate.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = StylingBoilerPlate.podspec; path = ../StylingBoilerPlate.podspec; sourceTree = "<group>"; };
+		426344EB0981C0566D3D7627 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		4A956C02B3C3DBB276A72E9E /* Pods_StylingBoilerPlate_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StylingBoilerPlate_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FD35F9A6FCB06E4F0C61CA6 /* Pods-StylingBoilerPlate_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StylingBoilerPlate_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StylingBoilerPlate_Example/Pods-StylingBoilerPlate_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* StylingBoilerPlate_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StylingBoilerPlate_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* StylingBoilerPlate_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StylingBoilerPlate_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		8B6DAAAF37187B683ECF282C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		8B6DAAAF37187B683ECF282C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		DB68498BB9CF00C31ACEBC50 /* Pods-StylingBoilerPlate_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StylingBoilerPlate_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-StylingBoilerPlate_Tests/Pods-StylingBoilerPlate_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		ED41E16A1F1E421E00FE297B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		ED41E16D1F1E422F00FE297B /* ColorCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCollectionViewController.swift; sourceTree = "<group>"; };
+		ED41E16F1F1E423400FE297B /* ColorCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCollectionViewCell.swift; sourceTree = "<group>"; };
+		ED41E1721F1E424700FE297B /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
+		ED41E1731F1E424700FE297B /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
+		ED41E1741F1E424700FE297B /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,9 +114,11 @@
 		607FACD21AFB9204008FA782 /* Example for StylingBoilerPlate */ = {
 			isa = PBXGroup;
 			children = (
+				ED41E1711F1E423C00FE297B /* Fonts */,
+				ED41E16C1F1E422400FE297B /* Colors */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
-				607FACD91AFB9204008FA782 /* Main.storyboard */,
+				ED41E16A1F1E421E00FE297B /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
@@ -157,6 +169,25 @@
 				4A956C02B3C3DBB276A72E9E /* Pods_StylingBoilerPlate_Tests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ED41E16C1F1E422400FE297B /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				ED41E16F1F1E423400FE297B /* ColorCollectionViewCell.swift */,
+				ED41E16D1F1E422F00FE297B /* ColorCollectionViewController.swift */,
+			);
+			name = Colors;
+			sourceTree = "<group>";
+		};
+		ED41E1711F1E423C00FE297B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				ED41E1721F1E424700FE297B /* Rubik-Bold.ttf */,
+				ED41E1731F1E424700FE297B /* Rubik-Medium.ttf */,
+				ED41E1741F1E424700FE297B /* Rubik-Regular.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,9 +279,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				ED41E16B1F1E421E00FE297B /* Main.storyboard in Resources */,
+				ED41E1771F1E424700FE297B /* Rubik-Regular.ttf in Resources */,
+				ED41E1751F1E424700FE297B /* Rubik-Bold.ttf in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				ED41E1761F1E424700FE297B /* Rubik-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +396,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				ED41E16E1F1E422F00FE297B /* ColorCollectionViewController.swift in Sources */,
+				ED41E1701F1E423400FE297B /* ColorCollectionViewCell.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,14 +421,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		607FACD91AFB9204008FA782 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				607FACDA1AFB9204008FA782 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		607FACDE1AFB9204008FA782 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -497,6 +525,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = StylingBoilerPlate/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -511,6 +540,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = StylingBoilerPlate/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
