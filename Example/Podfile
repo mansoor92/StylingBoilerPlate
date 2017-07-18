@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'StylingBoilerPlate_Example' do
+  pod 'StylingBoilerPlate', :path => '../'
+
+  target 'StylingBoilerPlate_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
