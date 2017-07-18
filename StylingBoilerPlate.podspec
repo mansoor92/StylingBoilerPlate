@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'StylingBoilerPlate'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of StylingBoilerPlate.'
+  s.summary          = 'Boiler plate for styling of ios project.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,25 +18,25 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+Boiler plate for styling of ios project.It helps to setup colors,labels,fonts, buttons and other controls.
                        DESC
 
-  s.homepage         = 'https://github.com/zainincubasys/StylingBoilerPlate'
+  s.homepage         = 'https://github.com/mansoor92/StylingBoilerPlate'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'zainincubasys' => 'rehan.azhar@incubasys.us' }
-  s.source           = { :git => 'https://github.com/zainincubasys/StylingBoilerPlate.git', :tag => s.version.to_s }
+  s.author           = { 'Mansoor Ali' => 'mali92390@gmial.com' }
+  s.source           = { :git => 'https://github.com/mansoor92/StylingBoilerPlate.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
-  s.source_files = 'StylingBoilerPlate/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'StylingBoilerPlate' => ['StylingBoilerPlate/Assets/*.png']
-  # }
+  s.source_files = 'StylingBoilerPlate/Classes/**/*.{h,m,swift}'
+
+   s.resource_bundles = {
+     'StylingBoilerPlate' => ['StylingBoilerPlate/Assets/*.png']
+   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+   s.frameworks = 'UIKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end

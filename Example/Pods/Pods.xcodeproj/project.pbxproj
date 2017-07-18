@@ -1,0 +1,836 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		061861209B6CB734ED2A9EF781E730A9 /* StylingBoilerPlate-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C0267E40B2D3FE8D4E25B64F20427E3 /* StylingBoilerPlate-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0FA7A13B40695F23115C286F1104FDA1 /* Pods-StylingBoilerPlate_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B1723F8F1A7BCDA98E8809136F522FDC /* Pods-StylingBoilerPlate_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		190188EA22E2C8388D5C03699BA96E4D /* Pods-StylingBoilerPlate_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 95CBB9226D5DC66B5D7CEBDFBE8CA6EC /* Pods-StylingBoilerPlate_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		636855F936467FF502DEB7E0605F7721 /* StylingBoilerPlate-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A03A41C115572CAAE312784FD97E9518 /* StylingBoilerPlate-dummy.m */; };
+		6A21C66D9919CA8CF077DCE9524E25CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		814A73CF430199B7BBEC8F1F5A7EB334 /* Pods-StylingBoilerPlate_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D41079F5D2CE6128B37CC39CF8893D82 /* Pods-StylingBoilerPlate_Tests-dummy.m */; };
+		AD77F6193808B45772D14707CC081FE6 /* Pods-StylingBoilerPlate_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 95F1DD1DBCB6BEF2059D9B2486A8026A /* Pods-StylingBoilerPlate_Example-dummy.m */; };
+		ED41E1451F1E253100FE297B /* DashedBorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41E13D1F1E253100FE297B /* DashedBorderButton.swift */; };
+		ED41E1461F1E253100FE297B /* DestructiveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41E13E1F1E253100FE297B /* DestructiveButton.swift */; };
+		ED41E1471F1E253100FE297B /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41E13F1F1E253100FE297B /* PrimaryButton.swift */; };
+		ED41E1481F1E253100FE297B /* SecondaryActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41E1401F1E253100FE297B /* SecondaryActionButton.swift */; };
+		ED41E1491F1E253100FE297B /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41E1411F1E253100FE297B /* SecondaryButton.swift */; };
+		ED41E14A1F1E253100FE297B /* SquareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41E1421F1E253100FE297B /* SquareButton.swift */; };
+		ED41E14B1F1E253100FE297B /* ToggleBottomTitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41E1431F1E253100FE297B /* ToggleBottomTitleButton.swift */; };
+		ED41E14C1F1E253100FE297B /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41E1441F1E253100FE297B /* ToggleButton.swift */; };
+		ED41E1521F1E255200FE297B /* BottomBorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41E14F1F1E255200FE297B /* BottomBorderTextField.swift */; };
+		ED41E1531F1E255200FE297B /* DarkBorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41E1501F1E255200FE297B /* DarkBorderTextField.swift */; };
+		ED41E1541F1E255200FE297B /* RoundTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41E1511F1E255200FE297B /* RoundTextField.swift */; };
+		ED41E1571F1E256800FE297B /* DarkBorderSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41E1561F1E256800FE297B /* DarkBorderSegmentedControl.swift */; };
+		ED41E1601F1E258200FE297B /* Color+custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41E1591F1E258200FE297B /* Color+custom.swift */; };
+		ED41E1611F1E258200FE297B /* Date+custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41E15A1F1E258200FE297B /* Date+custom.swift */; };
+		ED41E1621F1E258200FE297B /* Font+custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41E15B1F1E258200FE297B /* Font+custom.swift */; };
+		ED41E1631F1E258200FE297B /* UICollectionView+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41E15C1F1E258200FE297B /* UICollectionView+UITableView.swift */; };
+		ED41E1641F1E258200FE297B /* UIImage+custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41E15D1F1E258200FE297B /* UIImage+custom.swift */; };
+		ED41E1651F1E258200FE297B /* UILable+custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41E15E1F1E258200FE297B /* UILable+custom.swift */; };
+		ED41E1661F1E258200FE297B /* UITextField+custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41E15F1F1E258200FE297B /* UITextField+custom.swift */; };
+		EF606CC76DA18993718D77FAC3D49502 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		F5CAE819450C1E24488D5E917657A7D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AD14585CE6752F5DCA6AD54F72C10A6B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2915EB32AEF51FE780E7DEF95C0DDDEE;
+			remoteInfo = StylingBoilerPlate;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0161A3BF56C1BF894F6C165D67F8381D /* Pods-StylingBoilerPlate_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-StylingBoilerPlate_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		08A162C52FE994B6E738D10AB44B12BF /* Pods-StylingBoilerPlate_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-StylingBoilerPlate_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		184092CF25E7D909BBCA5214E7D20805 /* Pods-StylingBoilerPlate_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-StylingBoilerPlate_Example.modulemap"; sourceTree = "<group>"; };
+		22EE02F31FDD93EEB9A6C29F45B28B3A /* StylingBoilerPlate-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "StylingBoilerPlate-prefix.pch"; sourceTree = "<group>"; };
+		28124762CCC1696E476BD104AB02880D /* Pods-StylingBoilerPlate_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-StylingBoilerPlate_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		2CF37BFB212AD724D91EEFCB5922950A /* Pods-StylingBoilerPlate_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-StylingBoilerPlate_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3F13764D66A7E9894E6EF914BE93F3DC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		406DABA02897C35C0FCCFC0B58DAECA2 /* Pods-StylingBoilerPlate_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-StylingBoilerPlate_Tests.modulemap"; sourceTree = "<group>"; };
+		4AA270E4DC0F0A5F8FA16DFD712407DE /* Pods-StylingBoilerPlate_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-StylingBoilerPlate_Example-frameworks.sh"; sourceTree = "<group>"; };
+		56754B3A4ABD6663B284426F2BD99531 /* Pods-StylingBoilerPlate_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-StylingBoilerPlate_Tests-resources.sh"; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		66E6C51DB213CEC4D89DED1A4812A349 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7811B023419A75DE6B52D0C06F8EB79E /* StylingBoilerPlate.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = StylingBoilerPlate.modulemap; sourceTree = "<group>"; };
+		7AC587C5F43578FB7C9E3E916C7A5403 /* Pods-StylingBoilerPlate_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StylingBoilerPlate_Example.release.xcconfig"; sourceTree = "<group>"; };
+		7C0267E40B2D3FE8D4E25B64F20427E3 /* StylingBoilerPlate-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "StylingBoilerPlate-umbrella.h"; sourceTree = "<group>"; };
+		8421C73FA9B331F599998FB3866AB394 /* Pods-StylingBoilerPlate_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-StylingBoilerPlate_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8C56260AEDB5C7BFCC96F8F0F1FF4E7C /* StylingBoilerPlate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StylingBoilerPlate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CEB7C287748E96D8DAB86E722DBBFBD /* Pods-StylingBoilerPlate_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-StylingBoilerPlate_Example-resources.sh"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		95CBB9226D5DC66B5D7CEBDFBE8CA6EC /* Pods-StylingBoilerPlate_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-StylingBoilerPlate_Tests-umbrella.h"; sourceTree = "<group>"; };
+		95F1DD1DBCB6BEF2059D9B2486A8026A /* Pods-StylingBoilerPlate_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-StylingBoilerPlate_Example-dummy.m"; sourceTree = "<group>"; };
+		9C21ACE7B912C8ADCB5901ED9687AACF /* Pods-StylingBoilerPlate_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StylingBoilerPlate_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		A03A41C115572CAAE312784FD97E9518 /* StylingBoilerPlate-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "StylingBoilerPlate-dummy.m"; sourceTree = "<group>"; };
+		A185A0E8872714D6D5ECC239CB4396D2 /* Pods-StylingBoilerPlate_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StylingBoilerPlate_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		A4DBABF0FD0850D4E57216C2E832D915 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1723F8F1A7BCDA98E8809136F522FDC /* Pods-StylingBoilerPlate_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-StylingBoilerPlate_Example-umbrella.h"; sourceTree = "<group>"; };
+		BB8B800C42DD92FFF01AE71E88F21659 /* StylingBoilerPlate.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = StylingBoilerPlate.xcconfig; sourceTree = "<group>"; };
+		C971BBAA5307361BA33DFDFB623F1029 /* Pods_StylingBoilerPlate_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StylingBoilerPlate_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D41079F5D2CE6128B37CC39CF8893D82 /* Pods-StylingBoilerPlate_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-StylingBoilerPlate_Tests-dummy.m"; sourceTree = "<group>"; };
+		D8C8951F4556F6BC679D2A171EA748B6 /* Pods-StylingBoilerPlate_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StylingBoilerPlate_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		ED41E13D1F1E253100FE297B /* DashedBorderButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DashedBorderButton.swift; path = Buttons/DashedBorderButton.swift; sourceTree = "<group>"; };
+		ED41E13E1F1E253100FE297B /* DestructiveButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DestructiveButton.swift; path = Buttons/DestructiveButton.swift; sourceTree = "<group>"; };
+		ED41E13F1F1E253100FE297B /* PrimaryButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrimaryButton.swift; path = Buttons/PrimaryButton.swift; sourceTree = "<group>"; };
+		ED41E1401F1E253100FE297B /* SecondaryActionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecondaryActionButton.swift; path = Buttons/SecondaryActionButton.swift; sourceTree = "<group>"; };
+		ED41E1411F1E253100FE297B /* SecondaryButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SecondaryButton.swift; path = Buttons/SecondaryButton.swift; sourceTree = "<group>"; };
+		ED41E1421F1E253100FE297B /* SquareButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SquareButton.swift; path = Buttons/SquareButton.swift; sourceTree = "<group>"; };
+		ED41E1431F1E253100FE297B /* ToggleBottomTitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ToggleBottomTitleButton.swift; path = Buttons/ToggleBottomTitleButton.swift; sourceTree = "<group>"; };
+		ED41E1441F1E253100FE297B /* ToggleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ToggleButton.swift; path = Buttons/ToggleButton.swift; sourceTree = "<group>"; };
+		ED41E14F1F1E255200FE297B /* BottomBorderTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BottomBorderTextField.swift; path = "Text Fields/BottomBorderTextField.swift"; sourceTree = "<group>"; };
+		ED41E1501F1E255200FE297B /* DarkBorderTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DarkBorderTextField.swift; path = "Text Fields/DarkBorderTextField.swift"; sourceTree = "<group>"; };
+		ED41E1511F1E255200FE297B /* RoundTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoundTextField.swift; path = "Text Fields/RoundTextField.swift"; sourceTree = "<group>"; };
+		ED41E1561F1E256800FE297B /* DarkBorderSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DarkBorderSegmentedControl.swift; path = "Segmented Control/DarkBorderSegmentedControl.swift"; sourceTree = "<group>"; };
+		ED41E1591F1E258200FE297B /* Color+custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Color+custom.swift"; path = "Extensions/Color+custom.swift"; sourceTree = "<group>"; };
+		ED41E15A1F1E258200FE297B /* Date+custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Date+custom.swift"; path = "Extensions/Date+custom.swift"; sourceTree = "<group>"; };
+		ED41E15B1F1E258200FE297B /* Font+custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Font+custom.swift"; path = "Extensions/Font+custom.swift"; sourceTree = "<group>"; };
+		ED41E15C1F1E258200FE297B /* UICollectionView+UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UICollectionView+UITableView.swift"; path = "Extensions/UICollectionView+UITableView.swift"; sourceTree = "<group>"; };
+		ED41E15D1F1E258200FE297B /* UIImage+custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+custom.swift"; path = "Extensions/UIImage+custom.swift"; sourceTree = "<group>"; };
+		ED41E15E1F1E258200FE297B /* UILable+custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UILable+custom.swift"; path = "Extensions/UILable+custom.swift"; sourceTree = "<group>"; };
+		ED41E15F1F1E258200FE297B /* UITextField+custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITextField+custom.swift"; path = "Extensions/UITextField+custom.swift"; sourceTree = "<group>"; };
+		FEAE21961C2F635AD85BBF97BE7EED78 /* Pods_StylingBoilerPlate_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StylingBoilerPlate_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		50E9375363B87BDF67AA30637FB3A9B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5CAE819450C1E24488D5E917657A7D1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8228E85A539A29F403B3DC2BCF921149 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF606CC76DA18993718D77FAC3D49502 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A31875122C5D8362179E3493AA7A4732 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A21C66D9919CA8CF077DCE9524E25CD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		156E75E70536EFB28FC7444AC7DEAC1A /* Pods-StylingBoilerPlate_Example */ = {
+			isa = PBXGroup;
+			children = (
+				66E6C51DB213CEC4D89DED1A4812A349 /* Info.plist */,
+				184092CF25E7D909BBCA5214E7D20805 /* Pods-StylingBoilerPlate_Example.modulemap */,
+				2CF37BFB212AD724D91EEFCB5922950A /* Pods-StylingBoilerPlate_Example-acknowledgements.markdown */,
+				0161A3BF56C1BF894F6C165D67F8381D /* Pods-StylingBoilerPlate_Example-acknowledgements.plist */,
+				95F1DD1DBCB6BEF2059D9B2486A8026A /* Pods-StylingBoilerPlate_Example-dummy.m */,
+				4AA270E4DC0F0A5F8FA16DFD712407DE /* Pods-StylingBoilerPlate_Example-frameworks.sh */,
+				8CEB7C287748E96D8DAB86E722DBBFBD /* Pods-StylingBoilerPlate_Example-resources.sh */,
+				B1723F8F1A7BCDA98E8809136F522FDC /* Pods-StylingBoilerPlate_Example-umbrella.h */,
+				9C21ACE7B912C8ADCB5901ED9687AACF /* Pods-StylingBoilerPlate_Example.debug.xcconfig */,
+				7AC587C5F43578FB7C9E3E916C7A5403 /* Pods-StylingBoilerPlate_Example.release.xcconfig */,
+			);
+			name = "Pods-StylingBoilerPlate_Example";
+			path = "Target Support Files/Pods-StylingBoilerPlate_Example";
+			sourceTree = "<group>";
+		};
+		1A5AB38E6EC9DB677FE614885E55CDCD /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F572F2E838CC5A1C4B475B8421E56E6D /* StylingBoilerPlate */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		471B4393F63F45D7246C459E209ECF8F /* StylingBoilerPlate */ = {
+			isa = PBXGroup;
+			children = (
+				921D5BBDC711A98880158E8E6BC882ED /* Classes */,
+			);
+			path = StylingBoilerPlate;
+			sourceTree = "<group>";
+		};
+		6182609202340E2DF060878B207AF12A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A4DBABF0FD0850D4E57216C2E832D915 /* Info.plist */,
+				7811B023419A75DE6B52D0C06F8EB79E /* StylingBoilerPlate.modulemap */,
+				BB8B800C42DD92FFF01AE71E88F21659 /* StylingBoilerPlate.xcconfig */,
+				A03A41C115572CAAE312784FD97E9518 /* StylingBoilerPlate-dummy.m */,
+				22EE02F31FDD93EEB9A6C29F45B28B3A /* StylingBoilerPlate-prefix.pch */,
+				7C0267E40B2D3FE8D4E25B64F20427E3 /* StylingBoilerPlate-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/StylingBoilerPlate";
+			sourceTree = "<group>";
+		};
+		62E7F92316299B8F2ABB0C9DCB95D069 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				156E75E70536EFB28FC7444AC7DEAC1A /* Pods-StylingBoilerPlate_Example */,
+				E8E66C465E3345329AFB697B4DD13453 /* Pods-StylingBoilerPlate_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				1A5AB38E6EC9DB677FE614885E55CDCD /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				961DAEBCCA505FAE625D3DF9DB5BB8A9 /* Products */,
+				62E7F92316299B8F2ABB0C9DCB95D069 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		921D5BBDC711A98880158E8E6BC882ED /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				ED41E1581F1E256B00FE297B /* Extensions */,
+				ED41E1551F1E255600FE297B /* Segmented Control */,
+				ED41E14E1F1E254200FE297B /* Text Fields */,
+				ED41E14D1F1E253500FE297B /* Buttons */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		961DAEBCCA505FAE625D3DF9DB5BB8A9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FEAE21961C2F635AD85BBF97BE7EED78 /* Pods_StylingBoilerPlate_Example.framework */,
+				C971BBAA5307361BA33DFDFB623F1029 /* Pods_StylingBoilerPlate_Tests.framework */,
+				8C56260AEDB5C7BFCC96F8F0F1FF4E7C /* StylingBoilerPlate.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		E8E66C465E3345329AFB697B4DD13453 /* Pods-StylingBoilerPlate_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3F13764D66A7E9894E6EF914BE93F3DC /* Info.plist */,
+				406DABA02897C35C0FCCFC0B58DAECA2 /* Pods-StylingBoilerPlate_Tests.modulemap */,
+				8421C73FA9B331F599998FB3866AB394 /* Pods-StylingBoilerPlate_Tests-acknowledgements.markdown */,
+				28124762CCC1696E476BD104AB02880D /* Pods-StylingBoilerPlate_Tests-acknowledgements.plist */,
+				D41079F5D2CE6128B37CC39CF8893D82 /* Pods-StylingBoilerPlate_Tests-dummy.m */,
+				08A162C52FE994B6E738D10AB44B12BF /* Pods-StylingBoilerPlate_Tests-frameworks.sh */,
+				56754B3A4ABD6663B284426F2BD99531 /* Pods-StylingBoilerPlate_Tests-resources.sh */,
+				95CBB9226D5DC66B5D7CEBDFBE8CA6EC /* Pods-StylingBoilerPlate_Tests-umbrella.h */,
+				D8C8951F4556F6BC679D2A171EA748B6 /* Pods-StylingBoilerPlate_Tests.debug.xcconfig */,
+				A185A0E8872714D6D5ECC239CB4396D2 /* Pods-StylingBoilerPlate_Tests.release.xcconfig */,
+			);
+			name = "Pods-StylingBoilerPlate_Tests";
+			path = "Target Support Files/Pods-StylingBoilerPlate_Tests";
+			sourceTree = "<group>";
+		};
+		ED41E14D1F1E253500FE297B /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				ED41E13D1F1E253100FE297B /* DashedBorderButton.swift */,
+				ED41E13E1F1E253100FE297B /* DestructiveButton.swift */,
+				ED41E13F1F1E253100FE297B /* PrimaryButton.swift */,
+				ED41E1401F1E253100FE297B /* SecondaryActionButton.swift */,
+				ED41E1411F1E253100FE297B /* SecondaryButton.swift */,
+				ED41E1421F1E253100FE297B /* SquareButton.swift */,
+				ED41E1431F1E253100FE297B /* ToggleBottomTitleButton.swift */,
+				ED41E1441F1E253100FE297B /* ToggleButton.swift */,
+			);
+			name = Buttons;
+			sourceTree = "<group>";
+		};
+		ED41E14E1F1E254200FE297B /* Text Fields */ = {
+			isa = PBXGroup;
+			children = (
+				ED41E14F1F1E255200FE297B /* BottomBorderTextField.swift */,
+				ED41E1501F1E255200FE297B /* DarkBorderTextField.swift */,
+				ED41E1511F1E255200FE297B /* RoundTextField.swift */,
+			);
+			name = "Text Fields";
+			sourceTree = "<group>";
+		};
+		ED41E1551F1E255600FE297B /* Segmented Control */ = {
+			isa = PBXGroup;
+			children = (
+				ED41E1561F1E256800FE297B /* DarkBorderSegmentedControl.swift */,
+			);
+			name = "Segmented Control";
+			sourceTree = "<group>";
+		};
+		ED41E1581F1E256B00FE297B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ED41E1591F1E258200FE297B /* Color+custom.swift */,
+				ED41E15A1F1E258200FE297B /* Date+custom.swift */,
+				ED41E15B1F1E258200FE297B /* Font+custom.swift */,
+				ED41E15C1F1E258200FE297B /* UICollectionView+UITableView.swift */,
+				ED41E15D1F1E258200FE297B /* UIImage+custom.swift */,
+				ED41E15E1F1E258200FE297B /* UILable+custom.swift */,
+				ED41E15F1F1E258200FE297B /* UITextField+custom.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		F572F2E838CC5A1C4B475B8421E56E6D /* StylingBoilerPlate */ = {
+			isa = PBXGroup;
+			children = (
+				471B4393F63F45D7246C459E209ECF8F /* StylingBoilerPlate */,
+				6182609202340E2DF060878B207AF12A /* Support Files */,
+			);
+			name = StylingBoilerPlate;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4B62C1C1122279ED667571F9989CF80A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FA7A13B40695F23115C286F1104FDA1 /* Pods-StylingBoilerPlate_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A42E5EFB238353736D15574757ADBC7F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				190188EA22E2C8388D5C03699BA96E4D /* Pods-StylingBoilerPlate_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3A7F3EB323CBB0884F979CFC2A7D93A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				061861209B6CB734ED2A9EF781E730A9 /* StylingBoilerPlate-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2915EB32AEF51FE780E7DEF95C0DDDEE /* StylingBoilerPlate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74A8EF428A4FE2032A2095D436CB4FB3 /* Build configuration list for PBXNativeTarget "StylingBoilerPlate" */;
+			buildPhases = (
+				333B72CE6E62C89496DC06020F4EE27D /* Sources */,
+				50E9375363B87BDF67AA30637FB3A9B3 /* Frameworks */,
+				B3A7F3EB323CBB0884F979CFC2A7D93A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StylingBoilerPlate;
+			productName = StylingBoilerPlate;
+			productReference = 8C56260AEDB5C7BFCC96F8F0F1FF4E7C /* StylingBoilerPlate.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		96623379898E67F42266DAF864EF4E69 /* Pods-StylingBoilerPlate_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C77F0859CDC700B02167991C5113D7C7 /* Build configuration list for PBXNativeTarget "Pods-StylingBoilerPlate_Tests" */;
+			buildPhases = (
+				2BBCADB9B75392FBE7E4347B31AB122D /* Sources */,
+				A31875122C5D8362179E3493AA7A4732 /* Frameworks */,
+				A42E5EFB238353736D15574757ADBC7F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-StylingBoilerPlate_Tests";
+			productName = "Pods-StylingBoilerPlate_Tests";
+			productReference = C971BBAA5307361BA33DFDFB623F1029 /* Pods_StylingBoilerPlate_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9A5EFF46396594378E7D4F9F14CBE519 /* Pods-StylingBoilerPlate_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 784CC2A48A98AAEB852E541C4399106D /* Build configuration list for PBXNativeTarget "Pods-StylingBoilerPlate_Example" */;
+			buildPhases = (
+				549460D605798DC4EC434D0AF3B203F3 /* Sources */,
+				8228E85A539A29F403B3DC2BCF921149 /* Frameworks */,
+				4B62C1C1122279ED667571F9989CF80A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED1B336007FCB7BC68526107945FA2FF /* PBXTargetDependency */,
+			);
+			name = "Pods-StylingBoilerPlate_Example";
+			productName = "Pods-StylingBoilerPlate_Example";
+			productReference = FEAE21961C2F635AD85BBF97BE7EED78 /* Pods_StylingBoilerPlate_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					9A5EFF46396594378E7D4F9F14CBE519 = {
+						LastSwiftMigration = 0830;
+					};
+				};
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 961DAEBCCA505FAE625D3DF9DB5BB8A9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9A5EFF46396594378E7D4F9F14CBE519 /* Pods-StylingBoilerPlate_Example */,
+				96623379898E67F42266DAF864EF4E69 /* Pods-StylingBoilerPlate_Tests */,
+				2915EB32AEF51FE780E7DEF95C0DDDEE /* StylingBoilerPlate */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2BBCADB9B75392FBE7E4347B31AB122D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				814A73CF430199B7BBEC8F1F5A7EB334 /* Pods-StylingBoilerPlate_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		333B72CE6E62C89496DC06020F4EE27D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				636855F936467FF502DEB7E0605F7721 /* StylingBoilerPlate-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		549460D605798DC4EC434D0AF3B203F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED41E1521F1E255200FE297B /* BottomBorderTextField.swift in Sources */,
+				ED41E1491F1E253100FE297B /* SecondaryButton.swift in Sources */,
+				ED41E1451F1E253100FE297B /* DashedBorderButton.swift in Sources */,
+				ED41E1481F1E253100FE297B /* SecondaryActionButton.swift in Sources */,
+				ED41E1661F1E258200FE297B /* UITextField+custom.swift in Sources */,
+				ED41E1541F1E255200FE297B /* RoundTextField.swift in Sources */,
+				ED41E1531F1E255200FE297B /* DarkBorderTextField.swift in Sources */,
+				ED41E1651F1E258200FE297B /* UILable+custom.swift in Sources */,
+				ED41E1641F1E258200FE297B /* UIImage+custom.swift in Sources */,
+				ED41E1461F1E253100FE297B /* DestructiveButton.swift in Sources */,
+				ED41E14C1F1E253100FE297B /* ToggleButton.swift in Sources */,
+				ED41E1601F1E258200FE297B /* Color+custom.swift in Sources */,
+				ED41E1621F1E258200FE297B /* Font+custom.swift in Sources */,
+				ED41E1571F1E256800FE297B /* DarkBorderSegmentedControl.swift in Sources */,
+				ED41E1471F1E253100FE297B /* PrimaryButton.swift in Sources */,
+				ED41E14B1F1E253100FE297B /* ToggleBottomTitleButton.swift in Sources */,
+				ED41E14A1F1E253100FE297B /* SquareButton.swift in Sources */,
+				ED41E1611F1E258200FE297B /* Date+custom.swift in Sources */,
+				AD77F6193808B45772D14707CC081FE6 /* Pods-StylingBoilerPlate_Example-dummy.m in Sources */,
+				ED41E1631F1E258200FE297B /* UICollectionView+UITableView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ED1B336007FCB7BC68526107945FA2FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = StylingBoilerPlate;
+			target = 2915EB32AEF51FE780E7DEF95C0DDDEE /* StylingBoilerPlate */;
+			targetProxy = AD14585CE6752F5DCA6AD54F72C10A6B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2FD219F21161BFA42BD3D7DEC4327573 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C21ACE7B912C8ADCB5901ED9687AACF /* Pods-StylingBoilerPlate_Example.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-StylingBoilerPlate_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-StylingBoilerPlate_Example/Pods-StylingBoilerPlate_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_StylingBoilerPlate_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		345CC476DF4A7516DBD2220CF5035FF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		41E4736E5B6DA5529249826036C9667D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8C8951F4556F6BC679D2A171EA748B6 /* Pods-StylingBoilerPlate_Tests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-StylingBoilerPlate_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-StylingBoilerPlate_Tests/Pods-StylingBoilerPlate_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_StylingBoilerPlate_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		717E77604BFBB04BEAF56608A1CB2EDE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9C9C260376784F7DCE670C1918702B05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB8B800C42DD92FFF01AE71E88F21659 /* StylingBoilerPlate.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/StylingBoilerPlate/StylingBoilerPlate-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/StylingBoilerPlate/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/StylingBoilerPlate/StylingBoilerPlate.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = StylingBoilerPlate;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9F6715C7077C9F9DB8ECB23882D7ED90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AC587C5F43578FB7C9E3E916C7A5403 /* Pods-StylingBoilerPlate_Example.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-StylingBoilerPlate_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-StylingBoilerPlate_Example/Pods-StylingBoilerPlate_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_StylingBoilerPlate_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A6A8A8842D3DC5E88CDC4C3771FFF9A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB8B800C42DD92FFF01AE71E88F21659 /* StylingBoilerPlate.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/StylingBoilerPlate/StylingBoilerPlate-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/StylingBoilerPlate/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/StylingBoilerPlate/StylingBoilerPlate.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = StylingBoilerPlate;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B2F538E94CBA6940FF2C58BB9BE3B6D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A185A0E8872714D6D5ECC239CB4396D2 /* Pods-StylingBoilerPlate_Tests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-StylingBoilerPlate_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-StylingBoilerPlate_Tests/Pods-StylingBoilerPlate_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_StylingBoilerPlate_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				345CC476DF4A7516DBD2220CF5035FF3 /* Debug */,
+				717E77604BFBB04BEAF56608A1CB2EDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74A8EF428A4FE2032A2095D436CB4FB3 /* Build configuration list for PBXNativeTarget "StylingBoilerPlate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C9C260376784F7DCE670C1918702B05 /* Debug */,
+				A6A8A8842D3DC5E88CDC4C3771FFF9A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		784CC2A48A98AAEB852E541C4399106D /* Build configuration list for PBXNativeTarget "Pods-StylingBoilerPlate_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2FD219F21161BFA42BD3D7DEC4327573 /* Debug */,
+				9F6715C7077C9F9DB8ECB23882D7ED90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C77F0859CDC700B02167991C5113D7C7 /* Build configuration list for PBXNativeTarget "Pods-StylingBoilerPlate_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41E4736E5B6DA5529249826036C9667D /* Debug */,
+				B2F538E94CBA6940FF2C58BB9BE3B6D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

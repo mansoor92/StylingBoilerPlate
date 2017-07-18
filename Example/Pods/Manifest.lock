@@ -1,0 +1,16 @@
+PODS:
+  - StylingBoilerPlate (0.1.0)
+
+DEPENDENCIES:
+  - StylingBoilerPlate (from `../`)
+
+EXTERNAL SOURCES:
+  StylingBoilerPlate:
+    :path: ../
+
+SPEC CHECKSUMS:
+  StylingBoilerPlate: 0059c4a99e20c30c9d2a1ee891997f0306ecd9d9
+
+PODFILE CHECKSUM: 83d0539c7371f403b4928a9f9a8765e44ff8d2cd
+
+COCOAPODS: 1.2.1
