@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'StylingBoilerPlate'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'Boiler plate for styling of ios project.'
 
 # This description is used to generate tags and improve search results.
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-Boiler plate for styling of ios project.It helps to setup colors,labels,fonts, buttons and other controls.
+Boiler plate for styling of ios project.It helps to setup colors,labels,fonts, buttons and other controls.Also contains some useful extensions.
                        DESC
 
   s.homepage         = 'https://github.com/mansoor92/StylingBoilerPlate'
