@@ -97,7 +97,6 @@
 		ED41E15D1F1E258200FE297B /* UIImage+custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+custom.swift"; path = "Extensions/UIImage+custom.swift"; sourceTree = "<group>"; };
 		ED41E15E1F1E258200FE297B /* UILable+custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UILable+custom.swift"; path = "Extensions/UILable+custom.swift"; sourceTree = "<group>"; };
 		ED41E15F1F1E258200FE297B /* UITextField+custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITextField+custom.swift"; path = "Extensions/UITextField+custom.swift"; sourceTree = "<group>"; };
-		ED41E1691F1E288000FE297B /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = Classes/logo.png; sourceTree = "<group>"; };
 		FEAE21961C2F635AD85BBF97BE7EED78 /* Pods_StylingBoilerPlate_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StylingBoilerPlate_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -158,7 +157,6 @@
 		471B4393F63F45D7246C459E209ECF8F /* StylingBoilerPlate */ = {
 			isa = PBXGroup;
 			children = (
-				ED41E1681F1E285B00FE297B /* Assets */,
 				921D5BBDC711A98880158E8E6BC882ED /* Classes */,
 			);
 			path = StylingBoilerPlate;
@@ -298,14 +296,6 @@
 				ED41E15F1F1E258200FE297B /* UITextField+custom.swift */,
 			);
 			name = Extensions;
-			sourceTree = "<group>";
-		};
-		ED41E1681F1E285B00FE297B /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				ED41E1691F1E288000FE297B /* logo.png */,
-			);
-			name = Assets;
 			sourceTree = "<group>";
 		};
 		F572F2E838CC5A1C4B475B8421E56E6D /* StylingBoilerPlate */ = {

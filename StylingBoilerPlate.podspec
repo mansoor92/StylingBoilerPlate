@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'StylingBoilerPlate'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'Boiler plate for styling of ios project.'
 
 # This description is used to generate tags and improve search results.
@@ -32,9 +32,9 @@ Boiler plate for styling of ios project.It helps to setup colors,labels,fonts, b
 
   s.source_files = 'StylingBoilerPlate/Classes/**/*.{h,m,swift}'
 
-   s.resource_bundles = {
-     'StylingBoilerPlate' => ['StylingBoilerPlate/Assets/*.png']
-   }
+#s.resource_bundles = {
+#       'StylingBoilerPlate' => ['StylingBoilerPlate/Assets/*.{png}']
+#  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
    s.frameworks = 'UIKit'
