@@ -33,6 +33,7 @@
 		ED41E1881F1E434800FE297B /* UIImage+custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41E15D1F1E258200FE297B /* UIImage+custom.swift */; };
 		ED41E1891F1E434800FE297B /* UILable+custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41E15E1F1E258200FE297B /* UILable+custom.swift */; };
 		ED41E18A1F1E434800FE297B /* UITextField+custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41E15F1F1E258200FE297B /* UITextField+custom.swift */; };
+		ED91AA261F25DA4A00A1895C /* UIViewController+custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED91AA251F25DA4A00A1895C /* UIViewController+custom.swift */; };
 		EF606CC76DA18993718D77FAC3D49502 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		F5CAE819450C1E24488D5E917657A7D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -97,6 +98,7 @@
 		ED41E15D1F1E258200FE297B /* UIImage+custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+custom.swift"; path = "Extensions/UIImage+custom.swift"; sourceTree = "<group>"; };
 		ED41E15E1F1E258200FE297B /* UILable+custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UILable+custom.swift"; path = "Extensions/UILable+custom.swift"; sourceTree = "<group>"; };
 		ED41E15F1F1E258200FE297B /* UITextField+custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITextField+custom.swift"; path = "Extensions/UITextField+custom.swift"; sourceTree = "<group>"; };
+		ED91AA251F25DA4A00A1895C /* UIViewController+custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+custom.swift"; sourceTree = "<group>"; };
 		FEAE21961C2F635AD85BBF97BE7EED78 /* Pods_StylingBoilerPlate_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StylingBoilerPlate_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -294,6 +296,7 @@
 				ED41E15D1F1E258200FE297B /* UIImage+custom.swift */,
 				ED41E15E1F1E258200FE297B /* UILable+custom.swift */,
 				ED41E15F1F1E258200FE297B /* UITextField+custom.swift */,
+				ED91AA251F25DA4A00A1895C /* UIViewController+custom.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -464,6 +467,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD77F6193808B45772D14707CC081FE6 /* Pods-StylingBoilerPlate_Example-dummy.m in Sources */,
+				ED91AA261F25DA4A00A1895C /* UIViewController+custom.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
