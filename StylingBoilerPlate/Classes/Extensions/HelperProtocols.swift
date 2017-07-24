@@ -10,7 +10,7 @@ import UIKit
 
 public protocol StoryBoardLoadableView{}
 public extension StoryBoardLoadableView where Self: UIViewController{
-    static var sceneName: String {
+    public static var sceneName: String {
         let vc = String(describing: self)
         let str = vc.replacingOccurrences(of: "ViewController", with: "Scene")
         return str
@@ -18,11 +18,11 @@ public extension StoryBoardLoadableView where Self: UIViewController{
 }
 
 //Load view from xib file
-protocol CustomView{
+public protocol CustomView{
     init(frame: CGRect)
 }
-extension CustomView where Self: UIView, Self: NibLoadableView{
-    var view: UIView{
+public extension CustomView where Self: UIView, Self: NibLoadableView{
+    public var view: UIView{
         print(Self.nibName)
         let nib = Bundle.main.loadNibNamed(Self.nibName, owner: self, options: nil)
         let tempView = nib?.first as? UIView
@@ -36,7 +36,7 @@ extension CustomView where Self: UIView, Self: NibLoadableView{
         return tempView!
     }
     
-    func commonInit()  {
+    public func commonInit()  {
         self.addSubview(view)
     }
     
