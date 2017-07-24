@@ -14,6 +14,9 @@
 		6A21C66D9919CA8CF077DCE9524E25CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		814A73CF430199B7BBEC8F1F5A7EB334 /* Pods-StylingBoilerPlate_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D41079F5D2CE6128B37CC39CF8893D82 /* Pods-StylingBoilerPlate_Tests-dummy.m */; };
 		AD77F6193808B45772D14707CC081FE6 /* Pods-StylingBoilerPlate_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 95F1DD1DBCB6BEF2059D9B2486A8026A /* Pods-StylingBoilerPlate_Example-dummy.m */; };
+		ED4129E31F263F2B00EAB28C /* HelperProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4129E01F263F2B00EAB28C /* HelperProtocols.swift */; };
+		ED4129E41F263F2B00EAB28C /* UITableViewCell+custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4129E11F263F2B00EAB28C /* UITableViewCell+custom.swift */; };
+		ED4129E51F263F2B00EAB28C /* UIViewController+custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4129E21F263F2B00EAB28C /* UIViewController+custom.swift */; };
 		ED41E1781F1E432E00FE297B /* BottomBorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41E14F1F1E255200FE297B /* BottomBorderTextField.swift */; };
 		ED41E1791F1E432E00FE297B /* DarkBorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41E1501F1E255200FE297B /* DarkBorderTextField.swift */; };
 		ED41E17A1F1E432E00FE297B /* RoundTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41E1511F1E255200FE297B /* RoundTextField.swift */; };
@@ -33,7 +36,6 @@
 		ED41E1881F1E434800FE297B /* UIImage+custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41E15D1F1E258200FE297B /* UIImage+custom.swift */; };
 		ED41E1891F1E434800FE297B /* UILable+custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41E15E1F1E258200FE297B /* UILable+custom.swift */; };
 		ED41E18A1F1E434800FE297B /* UITextField+custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED41E15F1F1E258200FE297B /* UITextField+custom.swift */; };
-		ED91AA261F25DA4A00A1895C /* UIViewController+custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED91AA251F25DA4A00A1895C /* UIViewController+custom.swift */; };
 		EF606CC76DA18993718D77FAC3D49502 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		F5CAE819450C1E24488D5E917657A7D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -79,6 +81,9 @@
 		C971BBAA5307361BA33DFDFB623F1029 /* Pods_StylingBoilerPlate_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StylingBoilerPlate_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D41079F5D2CE6128B37CC39CF8893D82 /* Pods-StylingBoilerPlate_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-StylingBoilerPlate_Tests-dummy.m"; sourceTree = "<group>"; };
 		D8C8951F4556F6BC679D2A171EA748B6 /* Pods-StylingBoilerPlate_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StylingBoilerPlate_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		ED4129E01F263F2B00EAB28C /* HelperProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HelperProtocols.swift; path = Extensions/HelperProtocols.swift; sourceTree = "<group>"; };
+		ED4129E11F263F2B00EAB28C /* UITableViewCell+custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITableViewCell+custom.swift"; path = "Extensions/UITableViewCell+custom.swift"; sourceTree = "<group>"; };
+		ED4129E21F263F2B00EAB28C /* UIViewController+custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+custom.swift"; path = "Extensions/UIViewController+custom.swift"; sourceTree = "<group>"; };
 		ED41E13D1F1E253100FE297B /* DashedBorderButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DashedBorderButton.swift; path = Buttons/DashedBorderButton.swift; sourceTree = "<group>"; };
 		ED41E13E1F1E253100FE297B /* DestructiveButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DestructiveButton.swift; path = Buttons/DestructiveButton.swift; sourceTree = "<group>"; };
 		ED41E13F1F1E253100FE297B /* PrimaryButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrimaryButton.swift; path = Buttons/PrimaryButton.swift; sourceTree = "<group>"; };
@@ -98,7 +103,6 @@
 		ED41E15D1F1E258200FE297B /* UIImage+custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+custom.swift"; path = "Extensions/UIImage+custom.swift"; sourceTree = "<group>"; };
 		ED41E15E1F1E258200FE297B /* UILable+custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UILable+custom.swift"; path = "Extensions/UILable+custom.swift"; sourceTree = "<group>"; };
 		ED41E15F1F1E258200FE297B /* UITextField+custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITextField+custom.swift"; path = "Extensions/UITextField+custom.swift"; sourceTree = "<group>"; };
-		ED91AA251F25DA4A00A1895C /* UIViewController+custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+custom.swift"; sourceTree = "<group>"; };
 		FEAE21961C2F635AD85BBF97BE7EED78 /* Pods_StylingBoilerPlate_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StylingBoilerPlate_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -289,6 +293,9 @@
 		ED41E1581F1E256B00FE297B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				ED4129E01F263F2B00EAB28C /* HelperProtocols.swift */,
+				ED4129E11F263F2B00EAB28C /* UITableViewCell+custom.swift */,
+				ED4129E21F263F2B00EAB28C /* UIViewController+custom.swift */,
 				ED41E1591F1E258200FE297B /* Color+custom.swift */,
 				ED41E15A1F1E258200FE297B /* Date+custom.swift */,
 				ED41E15B1F1E258200FE297B /* Font+custom.swift */,
@@ -296,7 +303,6 @@
 				ED41E15D1F1E258200FE297B /* UIImage+custom.swift */,
 				ED41E15E1F1E258200FE297B /* UILable+custom.swift */,
 				ED41E15F1F1E258200FE297B /* UITextField+custom.swift */,
-				ED91AA251F25DA4A00A1895C /* UIViewController+custom.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -466,8 +472,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED4129E41F263F2B00EAB28C /* UITableViewCell+custom.swift in Sources */,
 				AD77F6193808B45772D14707CC081FE6 /* Pods-StylingBoilerPlate_Example-dummy.m in Sources */,
-				ED91AA261F25DA4A00A1895C /* UIViewController+custom.swift in Sources */,
+				ED4129E31F263F2B00EAB28C /* HelperProtocols.swift in Sources */,
+				ED4129E51F263F2B00EAB28C /* UIViewController+custom.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
