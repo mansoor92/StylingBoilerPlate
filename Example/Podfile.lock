@@ -1,5 +1,34 @@
 PODS:
-  - StylingBoilerPlate (0.1.0)
+  - MRProgress (0.8.3):
+    - MRProgress/ActivityIndicator (= 0.8.3)
+    - MRProgress/Blur (= 0.8.3)
+    - MRProgress/Circular (= 0.8.3)
+    - MRProgress/Icons (= 0.8.3)
+    - MRProgress/NavigationBarProgress (= 0.8.3)
+    - MRProgress/Overlay (= 0.8.3)
+  - MRProgress/ActivityIndicator (0.8.3):
+    - MRProgress/Stopable
+  - MRProgress/Blur (0.8.3):
+    - MRProgress/Helper
+  - MRProgress/Circular (0.8.3):
+    - MRProgress/Helper
+    - MRProgress/ProgressBaseClass
+    - MRProgress/Stopable
+  - MRProgress/Helper (0.8.3)
+  - MRProgress/Icons (0.8.3)
+  - MRProgress/NavigationBarProgress (0.8.3):
+    - MRProgress/ProgressBaseClass
+  - MRProgress/Overlay (0.8.3):
+    - MRProgress/ActivityIndicator
+    - MRProgress/Blur
+    - MRProgress/Circular
+    - MRProgress/Helper
+    - MRProgress/Icons
+  - MRProgress/ProgressBaseClass (0.8.3)
+  - MRProgress/Stopable (0.8.3):
+    - MRProgress/Helper
+  - StylingBoilerPlate (0.1.10):
+    - MRProgress
 
 DEPENDENCIES:
   - StylingBoilerPlate (from `../`)
@@ -9,7 +38,8 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  StylingBoilerPlate: 0059c4a99e20c30c9d2a1ee891997f0306ecd9d9
+  MRProgress: 16de7cc9f347e8846797a770db102a323fe7ef09
+  StylingBoilerPlate: fef5f9c2060626c9d736c77e6656e16049c09bc7
 
 PODFILE CHECKSUM: 83d0539c7371f403b4928a9f9a8765e44ff8d2cd
 

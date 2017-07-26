@@ -1,22 +1,29 @@
 {
   "name": "StylingBoilerPlate",
-  "version": "0.1.0",
-  "summary": "A short description of StylingBoilerPlate.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/zainincubasys/StylingBoilerPlate",
+  "version": "0.1.10",
+  "summary": "Boiler plate for styling of ios project.",
+  "description": "Boiler plate for styling of ios project.It helps to setup colors,labels,fonts, buttons and other controls.Also contains some useful extensions.",
+  "homepage": "https://github.com/mansoor92/StylingBoilerPlate",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "zainincubasys": "rehan.azhar@incubasys.us"
+    "Mansoor Ali": "mali92390@gmial.com"
   },
   "source": {
-    "git": "https://github.com/zainincubasys/StylingBoilerPlate.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/mansoor92/StylingBoilerPlate.git",
+    "tag": "0.1.10"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
-  "source_files": "StylingBoilerPlate/Classes/**/*"
+  "source_files": "StylingBoilerPlate/Classes/**/*.{h,m,swift}",
+  "resources": "StylingBoilerPlate/Classes/**/*.{xib,ttf}",
+  "frameworks": "UIKit",
+  "dependencies": {
+    "MRProgress": [
+
+    ]
+  }
 }
