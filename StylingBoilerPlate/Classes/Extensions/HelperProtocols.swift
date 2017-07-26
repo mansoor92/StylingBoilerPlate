@@ -22,22 +22,16 @@ public protocol CustomView{
     init(frame: CGRect)
 }
 public extension CustomView where Self: UIView, Self: NibLoadableView{
-    public var view: UIView{
-        print(Self.nibName)
-        let nib = Bundle.main.loadNibNamed(Self.nibName, owner: self, options: nil)
+    
+    public func commonInit(bundle: Bundle)  {
+        let nib = bundle.loadNibNamed(Self.nibName, owner: self, options: nil)
         let tempView = nib?.first as? UIView
         guard (tempView) != nil else {
-            let view =  UIView()
-            view.backgroundColor = UIColor.red
-            return view
+            fatalError("unable to load custom view")
         }
         tempView!.frame = self.bounds
         tempView!.autoresizingMask = [.flexibleWidth,.flexibleHeight]
-        return tempView!
-    }
-    
-    public func commonInit()  {
-        self.addSubview(view)
+        self.addSubview(tempView!)
     }
     
     
