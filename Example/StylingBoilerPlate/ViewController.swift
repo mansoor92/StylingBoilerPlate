@@ -29,7 +29,7 @@ class ViewController: UIViewController, ServiceResponseViewDelegate{
         self.navigationItem.rightBarButtonItem = item2
     }
     func showLoading()  {
-        lv.showLoading(toView: self.view, msg: "Loading Sample", mode: MRProgressOverlayViewMode.determinateCircular)
+        lv.showLoading(toView: self.view, msg: "Loading Sample", mode: MRProgressOverlayViewMode.indeterminate)
 //
     }
     
