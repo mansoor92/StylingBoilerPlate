@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'StylingBoilerPlate'
-  s.version          = '0.1.14'
+  s.version          = '0.1.15'
   s.summary          = 'Boiler plate for styling of ios project.'
 
 # This description is used to generate tags and improve search results.
