@@ -53,7 +53,7 @@ extension UICollectionViewCell: ReuseableView{}
 
 public extension UICollectionView{
     
-    public func register<T: UITableViewCell>(_ :T.Type, bundle: Bundle = .main) where T:ReuseableView, T: NibLoadableView{
+    public func register<T: UICollectionViewCell>(_ :T.Type, bundle: Bundle = .main) where T:ReuseableView, T: NibLoadableView{
         let nib = UINib(nibName: T.nibName, bundle: bundle)
         register(nib, forCellWithReuseIdentifier: T.reuseId)
     }

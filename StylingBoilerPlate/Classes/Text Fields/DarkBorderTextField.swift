@@ -4,7 +4,7 @@ import UIKit
 
 public class DarkBorderTextField: UITextField, Configurable{
     
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         config()
     }
@@ -37,4 +37,13 @@ public class DarkBorderTextField: UITextField, Configurable{
         self.rightView = nil
         self.rightViewMode = .never
     }
+    
+//    public override func textRect(forBounds bounds: CGRect) -> CGRect {
+//        return bounds.insetBy(dx: 6, dy: 0)
+//    }
+//    
+//    public override func editingRect(forBounds bounds: CGRect) -> CGRect {
+//        return bounds.insetBy(dx: 6, dy: 0)
+//    }
+//    
 }

@@ -149,7 +149,7 @@ open class ResponseError {
         }
     }
     
-    func showAlert(viewController:UIViewController?,actionRetry:UIAlertAction?,actionCancel:UIAlertAction? = nil,showDefaultCancel:Bool = true) {
+    public func showAlert(viewController:UIViewController?,actionRetry:UIAlertAction?,actionCancel:UIAlertAction? = nil,showDefaultCancel:Bool = true) {
         guard viewController != nil else {
             return
         }

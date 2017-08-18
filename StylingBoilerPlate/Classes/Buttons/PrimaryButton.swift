@@ -14,6 +14,16 @@ public class PrimaryButton: UIButton, Configurable {
 
     @IBInspectable public var isLarge: Bool = true
     
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+        config()
+    }
+    
+    public required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        config()
+    }
+    
     public override  func awakeFromNib() {
         config()
     }

@@ -3,6 +3,7 @@ import UIKit
 public class DarkBorderSegmentedControl: UISegmentedControl {
     
     @IBInspectable public var isLightBackground: Bool = false
+     @IBInspectable public var cornerRadius: CGFloat = 5
     
     override init(frame: CGRect) {
         super.init(frame: frame)

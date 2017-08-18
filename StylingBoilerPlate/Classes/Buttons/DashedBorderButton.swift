@@ -10,11 +10,21 @@ import UIKit
 
 public class DashedBorderButton: UIButton,Configurable {
 
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+        config()
+    }
+    
+    public required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        config()
+    }
+    
     public override func awakeFromNib() {
         config()
     }
 
-    func config() {
+    public func config() {
         addBorder()
         self.titleLabel?.font = UIFont.appFont(font: .RubikRegular, pontSize: 14)
         self.tintColor = UIColor.appColor(color: .Secondary)
