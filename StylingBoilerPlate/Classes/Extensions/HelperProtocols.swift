@@ -34,6 +34,4 @@ public extension CustomView where Self: UIView, Self: NibLoadableView{
         self.addSubview(tempView!)
         return tempView!
     }
-    
-    
 }
