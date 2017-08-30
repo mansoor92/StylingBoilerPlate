@@ -15,14 +15,18 @@ public class Alert{
         guard viewController != nil else {
             return
         }
+        let alert = createAlert(viewController:viewController,title:title,msg:msg,actions:actions,showOnlyDismissBtn:showOnlyDismissBtn,dismissBtnTitle:dismissBtnTitle)
+        viewController!.present(alert, animated: true, completion: nil)
+    }//showError
+    
+    static func createAlert(viewController:UIViewController?,title:String? = nil,msg:String? = nil,actions:[UIAlertAction]? = nil,showOnlyDismissBtn:Bool=true,dismissBtnTitle:String = "Dismiss") -> UIAlertController {
         let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
         
         //dismiss button check
         if showOnlyDismissBtn {
             let actionDismiss = UIAlertAction(title: dismissBtnTitle, style: .cancel, handler: nil)
             alert.addAction(actionDismiss)
-            viewController!.present(alert, animated: true, completion: nil)
-            return
+            return alert
         }
         
         if actions != nil{
@@ -30,8 +34,8 @@ public class Alert{
                 alert.addAction(action)
             }
         }//if
-        viewController!.present(alert, animated: true, completion: nil)
-    }//showError
+        return alert
+    }
     
 
     static public func showImagePickerAlert(viewController:UIViewController,actionPhotoLibrary:UIAlertAction,actionCamera:UIAlertAction,actionRemove:UIAlertAction? = nil)  {

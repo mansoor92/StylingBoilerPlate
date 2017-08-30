@@ -109,36 +109,7 @@ public extension UIImage{
         }
         return base64String!
     }
-    /*
-    class func uploadImage(viewController:UIViewController,bgView:BgView?,formView:FormView?=nil,imageString:String,completion:@escaping ((_ retry:Bool,_ canceled:Bool,_ document:Document?)->Void))  {
-        let documentPartial = DocumentPartial()
-        documentPartial.input = "data:image/png;base64,\(imageString)"
-        if formView == nil{
-            bgView!.showLoading(msg: "Uploading photo")
-        }else{
-            formView!.showLoading(msg: "Uploading photo")
-        }
-        
-        PicturesAPI.pOSTPicture(body: documentPartial) { (document, error) in
-            if formView == nil{
-                bgView!.hideLoadingOrMessageView()
-            }else{
-                formView!.hideLoadingOrMessageView()
-            }
-            
-            if error != nil{
-                let actionRetry = UIAlertAction(title: "Retry", style: .default, handler: { (action) in
-                    completion(true, false, nil)
-                })
-                let actionCancel = UIAlertAction(title: "Cancel", style: .cancel, handler: { (action) in
-                    completion(false,true,nil)
-                })
-                error?.showAlert(viewController: viewController, actionRetry: actionRetry,actionCancel: actionCancel)
-            }else{
-                 completion(false,false,document)
-            }
-        }//serviceCall
-    }*/
+
 }
 
 
