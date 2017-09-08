@@ -18,15 +18,18 @@ public class ToggleButton: UIButton, Configurable  {
     }
     @IBInspectable public var selectedStateImage: UIImage!
     @IBInspectable public var unSelectedStateImage: UIImage!
+    @IBInspectable public var selectedStateColor: UIColor = UIColor.appColor(color: .Primary)
+    @IBInspectable public var unSelectedStateColor: UIColor = UIColor.appColor(color: .Dark)
+    
     public var toggleDelegate:Toggleable?
     
     private func toggleState(state:Bool){
         print("state:\(state)")
         if state{
-            self.setTitleColor(UIColor.appColor(color: .Primary), for: .normal)
+            self.setTitleColor(selectedStateColor, for: .normal)
             self.setImage(selectedStateImage.withRenderingMode(.alwaysOriginal), for: .normal)
         }else{
-            self.setTitleColor(UIColor.appColor(color: .Dark), for: .normal)
+            self.setTitleColor(unSelectedStateColor, for: .normal)
             self.setImage(unSelectedStateImage.withRenderingMode(.alwaysOriginal), for: .normal)
         }
     }
