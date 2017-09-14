@@ -7,24 +7,33 @@
 //
 
 import UIKit
-import MRProgress
+//import MRProgress
+import SVProgressHUD
 
 public protocol RefreshControlDelegate{
     func refreshData()
 }
 
-public class LoadingBackgroundView: UIView {
+public class LoadingView: UIView {
     
     private var serviceResponseView : ServiceResponseView?
-    public var loadingMessage:String = ""
+    public var loadingMessage:String = "Loading..."
     private var loadingIsVisible = false
-    private var mrProgressOverlay : MRProgressOverlayView!
+//    private var mrProgressOverlay : MRProgressOverlayView!
     private var refreshControl : UIRefreshControl?
+//    var isShowingS
 //    private var pageLoadingView : PageLoadingView!
     
     private var refreshDelegate: RefreshControlDelegate?
-    
     override public func awakeFromNib() {}
+    
+    public static func show(msg: String = "Loading..."){
+        SVProgressHUD.show(withStatus: msg)
+    }
+    
+    public static func hide(){
+        SVProgressHUD.dismiss()
+    }
     
     //Service Response View
     public func addServiceReponseView(delegate:ServiceResponseViewDelegate,top:CGFloat=0,bottom:CGFloat=0)  {
@@ -83,30 +92,32 @@ public class LoadingBackgroundView: UIView {
     }*/
     
     public func hideLoadingOrMessageView()  {
-        if mrProgressOverlay != nil{
-            mrProgressOverlay.hide(true)
-            mrProgressOverlay = nil
-            self.loadingIsVisible = false
-        }else {
+//        if mrProgressOverlay != nil{
+//            mrProgressOverlay.hide(true)
+//            mrProgressOverlay = nil
+//            self.loadingIsVisible = false
+//        }else {
+//            serviceResponseView?.isHidden = true
+//        }
+        if loadingIsVisible{
+            LoadingView.hide()
+            loadingIsVisible = false
+        }else{
             serviceResponseView?.isHidden = true
         }
     }
     
     //Show Loading View
-    public func showLoading(toView: UIView, msg: String = "", mode:MRProgressOverlayViewMode = MRProgressOverlayViewMode.indeterminate)  {
+//    , mode:MRProgressOverlayViewMode = MRProgressOverlayViewMode.indeterminate
+    public func showLoadingView(toView: UIView, msg: String = "Loading...")  {
         var title = ""
         if msg.isEmpty{
             title = loadingMessage
         }else{
             title = msg
         }
-        if mrProgressOverlay != nil{
-            mrProgressOverlay.hide(true)
-            mrProgressOverlay = nil
-            self.loadingIsVisible = false
-        }
-        mrProgressOverlay = MRProgressOverlayView.showOverlayAdded(to: toView, title: title, mode: mode, animated: true)
         self.loadingIsVisible = true
+        LoadingView.show(msg: title)
     }
     
     public func showReponseView(title: String?, msg: String?, img: UIImage?, hideRetryBtn: Bool, retryBtnTitle:String = "TRY AGAIN")  {
@@ -116,6 +127,7 @@ public class LoadingBackgroundView: UIView {
             serviceResponseView?.isHidden = false
         }
     }
+
 }
 
 

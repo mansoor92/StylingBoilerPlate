@@ -39,5 +39,5 @@ Boiler plate for styling of ios project.It helps to setup colors,labels,fonts, b
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
    s.frameworks = 'UIKit'
-   s.dependency 'MRProgress'
+   s.dependency 'SVProgressHUD'
 end
