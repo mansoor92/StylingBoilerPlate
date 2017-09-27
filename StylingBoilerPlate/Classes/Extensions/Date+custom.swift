@@ -50,7 +50,7 @@ public extension Date{
         return ""
     }
     
-    public func offsetByHours (fromDate:Date,unit:Calendar.Component) -> Int{
+    public func offsetBy(unit:Calendar.Component, fromDate:Date) -> Int{
         let unitFlags:Set<Calendar.Component> = [unit]
         let difference = Calendar.current.dateComponents(unitFlags, from: fromDate, to: self)
 
