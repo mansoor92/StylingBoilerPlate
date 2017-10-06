@@ -28,6 +28,9 @@ public class LoadingView: UIView {
     override public func awakeFromNib() {}
     
     public static func show(msg: String = "Loading..."){
+        if let window = UIApplication.shared.delegate?.window{
+            SVProgressHUD.setContainerView(window)
+        }
         SVProgressHUD.show(withStatus: msg)
     }
     
