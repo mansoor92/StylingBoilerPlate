@@ -22,14 +22,14 @@ public class LoadingView: UIView {
 //    private var mrProgressOverlay : MRProgressOverlayView!
     private var refreshControl : UIRefreshControl?
 //    var isShowingS
-//    private var pageLoadingView : PageLoadingView!
+    private var pageLoadingView : PageLoadingView!
     
     private var refreshDelegate: RefreshControlDelegate?
     override public func awakeFromNib() {}
     
-    public static func show(msg: String = "Loading..."){
-        if let window = UIApplication.shared.delegate?.window{
-            SVProgressHUD.setContainerView(window)
+    public static func show(msg: String = "Loading...",window: UIWindow? = nil){
+        if window != nil{
+            SVProgressHUD.setContainerView(window!)
         }
         SVProgressHUD.show(withStatus: msg)
     }
@@ -39,15 +39,16 @@ public class LoadingView: UIView {
     }
     
     //Service Response View
-    public func addServiceReponseView(delegate:ServiceResponseViewDelegate,top:CGFloat=0,bottom:CGFloat=0)  {
-        createServiceResponseView(delegate:delegate,top:top,bottom:bottom)
+    public func addServiceReponseView(delegate:ServiceResponseViewDelegate,top:CGFloat=0,bottom:CGFloat=0, isLight: Bool = false)  {
+        createServiceResponseView(delegate:delegate,top:top,bottom:bottom, isLight: isLight)
     }
     
-    func createServiceResponseView(delegate:ServiceResponseViewDelegate,top:CGFloat=0,bottom:CGFloat=0) {
+    func createServiceResponseView(delegate:ServiceResponseViewDelegate,top:CGFloat=0,bottom:CGFloat=0, isLight: Bool) {
         let w = UIScreen.main.bounds.width
         let h = UIScreen.main.bounds.height - top - bottom
         serviceResponseView = ServiceResponseView(frame: CGRect(x: 0, y: top, width: w, height: h))
         serviceResponseView?.delegate = delegate
+        serviceResponseView?.isLight = isLight
         self.addSubview(serviceResponseView!)
         self.bringSubview(toFront: serviceResponseView!)
         serviceResponseView?.isHidden = true
@@ -73,11 +74,11 @@ public class LoadingView: UIView {
         refreshControl = createRefreshControl(controller: controller, title: refreshTitle)
         collectionView.addSubview(refreshControl!)
     }
-    /*
+    
     //Page Loading view for pagination
-    func addPageLoadingView(top:CGFloat = 44,bottom:CGFloat)  {
+    public func addPageLoadingView(bottom:CGFloat = 0)  {
         let w = UIScreen.main.bounds.width
-        let y = UIScreen.main.bounds.height - top - bottom
+        let y = UIScreen.main.bounds.height - 44 - bottom
         pageLoadingView = PageLoadingView(frame:CGRect(x: 0, y: y, width: w, height: 44))
         pageLoadingView.backgroundColor = UIColor.yellow
         self.addSubview(pageLoadingView)
@@ -85,14 +86,19 @@ public class LoadingView: UIView {
         pageLoadingView.isHidden = true
     }
     
-    func showPageLoading(msg:String = "Loading more...")  {
+    public func showPageLoading(msg:String = "Loading more...")  {
         pageLoadingView.labelMsg.text = msg
         pageLoadingView.isHidden = false
+        loadingIsVisible = true
     }
     
     func hidePageLoading()  {
         pageLoadingView.isHidden = true
-    }*/
+    }
+    
+    public func isLoadingVisible() -> Bool {
+        return loadingIsVisible
+    }
     
     public func hideLoadingOrMessageView()  {
 //        if mrProgressOverlay != nil{
@@ -104,6 +110,10 @@ public class LoadingView: UIView {
 //        }
         if loadingIsVisible{
             LoadingView.hide()
+            if pageLoadingView != nil{
+               hidePageLoading()
+            }
+            refreshControl?.endRefreshing()
             loadingIsVisible = false
         }else{
             serviceResponseView?.isHidden = true
@@ -112,7 +122,7 @@ public class LoadingView: UIView {
     
     //Show Loading View
 //    , mode:MRProgressOverlayViewMode = MRProgressOverlayViewMode.indeterminate
-    public func showLoadingView(toView: UIView, msg: String = "Loading...")  {
+    public func showLoadingView(msg: String = "Loading...", window: UIWindow? = nil)  {
         var title = ""
         if msg.isEmpty{
             title = loadingMessage
@@ -120,10 +130,10 @@ public class LoadingView: UIView {
             title = msg
         }
         self.loadingIsVisible = true
-        LoadingView.show(msg: title)
+        LoadingView.show(msg: title, window: window)
     }
     
-    public func showReponseView(title: String?, msg: String?, img: UIImage?, hideRetryBtn: Bool, retryBtnTitle:String = "TRY AGAIN")  {
+    public func showReponseView(title: String?, msg: String?, img: UIImage?, hideRetryBtn: Bool, retryBtnTitle:String = "Try Again")  {
         if serviceResponseView != nil{
             serviceResponseView?.showMessage(title: title, msg: msg, image: img, hideRetryButton: hideRetryBtn)
             serviceResponseView?.btnRetry.setTitle(retryBtnTitle, for: .normal)

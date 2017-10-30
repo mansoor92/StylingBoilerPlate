@@ -22,7 +22,11 @@ public class ServiceResponseView: UIView, NibLoadableView, CustomView {
     var v: UIView!
     var delegate :ServiceResponseViewDelegate?
     let bundle = Bundle(for: ServiceResponseView.classForCoder())
-    
+    var isLight: Bool = false {
+        didSet{
+          changeTheme(lightTheme: isLight)
+        }
+    }
     override required public init(frame: CGRect) {
         super.init(frame: frame)
         v = commonInit(bundle: bundle)
@@ -36,12 +40,28 @@ public class ServiceResponseView: UIView, NibLoadableView, CustomView {
     }
     
     func configView()  {
-        btnRetry.tintColor = UIColor.appColor(color: .Secondary)
-        btnRetry.setTitleColor(UIColor.appColor(color: .Secondary), for: .normal)
+        //btnRetry.tintColor = UIColor.appColor(color: .Primary)
+        //btnRetry.setTitleColor(UIColor.appColor(color: .Light), for: .normal)
+        //btnRetry.backgroundColor = UIColor.appColor(color: .Primary)
         btnRetry.addTarget(self, action: #selector(actionRetry), for: .touchUpInside)
+//        changeTheme(lightTheme: isLight)
     }
     
-    
+    func changeTheme(lightTheme: Bool)  {
+        if lightTheme{
+            let color = UIColor.appColor(color: .Dark)
+            imageView.tintColor = color
+            labelTitle.textColor = color
+            labelError.textColor = color
+            self.backgroundColor = UIColor.appColor(color: .Light)
+        }else{
+            let color = UIColor.appColor(color: .Light)
+            imageView.tintColor = color
+            labelTitle.textColor = color
+            labelError.textColor = color
+            self.backgroundColor = UIColor.appColor(color: .Dark)
+        }
+    }
     func actionRetry() {
         delegate?.actionRetry()
     }
@@ -49,7 +69,7 @@ public class ServiceResponseView: UIView, NibLoadableView, CustomView {
     func showMessage(title:String?, msg: String?, image: UIImage?, hideRetryButton: Bool) {
         labelTitle.text = title
         labelError.text = msg
-        imageView.image = image
+        imageView.image = image?.withRenderingMode(.alwaysTemplate)
         if hideRetryButton{
             btnRetry.isHidden = true
         }else{
