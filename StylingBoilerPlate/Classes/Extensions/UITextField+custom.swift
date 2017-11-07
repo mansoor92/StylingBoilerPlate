@@ -35,12 +35,22 @@ extension UITextField:Shakeable{
         }
         return false
     }
+}
+
+extension UITextField{
     
-//    public func shake() {
-//        let animation = CAKeyframeAnimation(keyPath: "transform.translation.x")
-//        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
-//        animation.duration = 1
-//        animation.values = [-20.0, 20.0, -20.0, 20.0, -10.0, 10.0, -5.0, 5.0, 0.0 ]
-//        self.layer.add(animation, forKey: "shake")
-//    }
+    public func addActivityIndicatory()  {
+        let ind = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 12, height: 12))
+        ind.activityIndicatorViewStyle = .gray
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 15))
+        view.addSubview(ind)
+        self.rightViewMode = .always
+        ind.startAnimating()
+        self.rightView = view
+    }
+    
+    public func removeActivityIndicator()  {
+        self.rightView = nil
+        self.rightViewMode = .never
+    }
 }
