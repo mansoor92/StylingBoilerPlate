@@ -23,6 +23,7 @@ public class ToggleButton: UIButton, Configurable  {
     
     public var toggleDelegate:Toggleable?
     
+    
     private func toggleState(state:Bool){
         print("state:\(state)")
         if state{
@@ -34,12 +35,22 @@ public class ToggleButton: UIButton, Configurable  {
         }
     }
     
-    public override func awakeFromNib() {
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
         config()
     }
     
+    public required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        config()
+    }
+    
+    public override func awakeFromNib() {
+    }
+    
     func config()  {
-
+        
+        
         self.titleLabel?.font = UIFont.appFont(font: .RubikRegular, pontSize: 16)
         self.titleEdgeInsets.left = 8
         self.titleLabel?.lineBreakMode = .byWordWrapping

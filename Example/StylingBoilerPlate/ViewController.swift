@@ -8,38 +8,28 @@
 
 import UIKit
 import StylingBoilerPlate
-import MRProgress
 
-class ViewController: UIViewController, ServiceResponseViewDelegate{
-
-    var lv: LoadingBackgroundView!
+class ViewController: UIViewController, ToggleViewDelegate{
+    
+    @IBOutlet weak var btn: ToggleButton!
+     @IBOutlet weak var btnView: ToggleView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
-        lv = self.view as! LoadingBackgroundView
-        
-        lv.addServiceReponseView(delegate: self, top: 64, bottom: 0)
-        lv.showReponseView(title: "Network Error!", msg: "Please check your internet connection and try again", img: UIImage(named: "network"), hideRetryBtn: false)
-        let item = UIBarButtonItem(title: "Loading", style: .plain, target: self, action: #selector(showLoading))
-        self.navigationItem.leftBarButtonItem = item
-        
-        let item2 = UIBarButtonItem(title: "Hide", style: .plain, target: self, action: #selector(hideLoading))
-        self.navigationItem.rightBarButtonItem = item2
-    }
-    func showLoading()  {
-        lv.showLoading(toView: self.view, msg: "Loading Sample", mode: MRProgressOverlayViewMode.indeterminate)
-//
-    }
-    
-    func hideLoading()  {
-        lv.hideLoadingOrMessageView()
-    }
-    
-    func actionRetry() {
-        showLoading()
+        btnView.toggeable = self
+        btnView.selectedStateImg = #imageLiteral(resourceName: "cash-circle")
+        btnView.unSelectedStateImg = #imageLiteral(resourceName: "wallet-card")
     }
 
+    func viewToggled(state: Bool, view: ToggleView) {
+        if state{
+            btnView.title.text = "Mehram Ride"
+            btnView.title.numberOfLines = 2
+        }else{
+            btnView.title.numberOfLines = 1
+            btnView.title.text = "Wallet"
+        }
+    }
 }
 

@@ -26,7 +26,6 @@ public extension Date{
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = format
         dateFormatter.locale = Locale.init(identifier: "en_GB")
-        
         return dateFormatter.string(from: date)
     }
     
@@ -75,5 +74,13 @@ public extension Date{
         }
         
         return result
+    }
+    
+    static public func localToUTC(date: Date)-> String{
+        let dateFormater = DateFormatter()
+        dateFormater.calendar = Calendar.current
+        dateFormater.timeZone = TimeZone(abbreviation: "UTC")
+        let currentTimeString = dateFormater.string(from: date)
+        return currentTimeString
     }
 }
