@@ -21,5 +21,14 @@ public class DarkBorderTextField: UITextField, Configurable{
         self.layer.cornerRadius = 5
         self.layer.borderColor = UIColor.appColor(color: .Dark).cgColor
         self.layer.borderWidth = 1
+        
+    }
+    
+    public override func textRect(forBounds bounds: CGRect) -> CGRect {
+        return CGRect(x: bounds.origin.x+8, y: bounds.origin.y, width: bounds.size.width-16, height: bounds.size.height)
+    }
+    
+    public override func editingRect(forBounds bounds: CGRect) -> CGRect {
+        return CGRect(x: bounds.origin.x+8, y: bounds.origin.y, width: bounds.size.width-16, height: bounds.size.height)
     }
 }

@@ -11,7 +11,15 @@ import UIKit
 
 public class AppLabel: UILabel{
    
-    @IBInspectable public var isLight: Bool = false
+    @IBInspectable public var isLight: Bool = false{
+        didSet{
+            if self.isLight{
+                self.textColor = UIColor.appColor(color: .LightText)
+            }else{
+                self.textColor = UIColor.appColor(color: .DarkText)
+            }
+        }
+    }
     
     public func config(font: UIFont)  {
         self.font = font
@@ -45,7 +53,11 @@ public class CaptionLabel: AppLabel {
 
 public class NavigationTitleLabel: AppLabel {
     public override func awakeFromNib() {
-        super.config(font: UIFont.appFont(font: .RubikRegular, pontSize: 17))
+        super.config(font: NavigationTitleLabel.font())
+    }
+    
+    public static func font() -> UIFont{
+        return UIFont.appFont(font: .RubikRegular, pontSize: 17)
     }
 }
 
@@ -57,7 +69,10 @@ public class TitleLabel: AppLabel {
 
 public class TextLabel: AppLabel {
     public override func awakeFromNib() {
-        super.config(font: UIFont.appFont(font: .RubikRegular, pontSize: 15))
+        super.config(font: TextLabel.font())
+    }
+    public static func font() -> UIFont{
+        return UIFont.appFont(font: .RubikRegular, pontSize: 15)
     }
 }
 
@@ -71,7 +86,10 @@ public class CalloutLabel: AppLabel {
 //Timers/counters
 public class ShoutnoteLabel: AppLabel {
     public override func awakeFromNib() {
-        super.config(font: UIFont.appFont(font: .RubikMedium, pontSize: 48))
+        super.config(font: ShoutnoteLabel.font())
+    }
+    public static func font() -> UIFont{
+        return UIFont.appFont(font: .RubikMedium, pontSize: 48)
     }
 }
 

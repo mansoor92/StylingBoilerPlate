@@ -40,7 +40,7 @@ public class BorderLessSegmentedControl: UISegmentedControl {
 //        }else{
 //            normalTextColor = UIColor.appColor(color: .LightText)
 //        }
-        sharpCornersStyle(normalBackgroudColor: UIColor.white, selectedBackggroundColor: UIColor.appColor(color: .Secondary), tintColor: UIColor.appColor(color: .Secondary), normalTextColor: normalTextColor, selectedTextColor: UIColor.appColor(color: .Light))
+        sharpCornersStyle(normalBackgroudColor: UIColor.white, selectedBackggroundColor: UIColor.appColor(color: .Primary), tintColor: UIColor.appColor(color: .Primary), normalTextColor: normalTextColor, selectedTextColor: UIColor.appColor(color: .Light))
     }
     
     func sharpCornersStyle(normalBackgroudColor:UIColor,selectedBackggroundColor:UIColor,tintColor:UIColor,normalTextColor: UIColor, selectedTextColor:UIColor) {

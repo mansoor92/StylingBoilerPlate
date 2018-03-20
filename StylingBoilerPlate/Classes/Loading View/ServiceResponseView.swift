@@ -40,11 +40,7 @@ public class ServiceResponseView: UIView, NibLoadableView, CustomView {
     }
     
     func configView()  {
-        //btnRetry.tintColor = UIColor.appColor(color: .Primary)
-        //btnRetry.setTitleColor(UIColor.appColor(color: .Light), for: .normal)
-        //btnRetry.backgroundColor = UIColor.appColor(color: .Primary)
         btnRetry.addTarget(self, action: #selector(actionRetry), for: .touchUpInside)
-//        changeTheme(lightTheme: isLight)
     }
     
     func changeTheme(lightTheme: Bool)  {
@@ -66,7 +62,7 @@ public class ServiceResponseView: UIView, NibLoadableView, CustomView {
         delegate?.actionRetry()
     }
     
-    func showMessage(title:String?, msg: String?, image: UIImage?, hideRetryButton: Bool) {
+    func showMessage(title:String?, msg: String?, image: UIImage?, hideRetryButton: Bool, btnTitle: String) {
         labelTitle.text = title
         labelError.text = msg
         imageView.image = image?.withRenderingMode(.alwaysTemplate)

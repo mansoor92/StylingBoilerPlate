@@ -9,12 +9,16 @@
 import Foundation
 import UIKit
 
-struct ColorHexCodes{
-    static var values = [Color.Light.rawValue: 0xFFFFFF,Color.Dark.rawValue: 0x273038,
+public struct ColorHexCodes{
+    public static var values = [Color.Light.rawValue: 0xFFFFFF,Color.Dark.rawValue: 0x273038,
                          Color.Medium.rawValue: 0xB5B0B0,
                          Color.DarkText.rawValue: 0x030303,Color.LightText.rawValue: 0xFFFFFF,
-                         Color.Primary.rawValue: 0x4B58A7, Color.Secondary.rawValue: 0xE8963E,
-                         Color.Destructive.rawValue: 0xBF2326,Color.Constructive.rawValue: 0x4B58A7]
+                         Color.Primary.rawValue: 0x0084b4, Color.PrimaryDark.rawValue: 0x006987,
+                         Color.Secondary.rawValue: 0xE8963E,
+                         Color.Destructive.rawValue: 0xBF2326,Color.Constructive.rawValue: 0x4B58A7,
+                         Color.Header.rawValue: 0xEFEFEF]
+//    Color.Primary.rawValue: 0x4B58A7
+//    0x0058A1
 }
 
 public enum Color: String{
@@ -24,9 +28,11 @@ public enum Color: String{
     case DarkText = "DarkText"
     case LightText = "LightText"
     case Primary = "Primary"
+    case PrimaryDark = "PrimaryDark"
     case Secondary = "Secondary"
     case Destructive = "Destructive"
     case Constructive = "Constructive"
+    case Header = "Header"
 }
 
 public extension UIColor{

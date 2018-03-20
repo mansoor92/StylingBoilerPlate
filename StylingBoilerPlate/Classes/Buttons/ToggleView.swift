@@ -52,7 +52,7 @@ public class ToggleView: UIView, CustomView, NibLoadableView {
     func configView()  {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(actTapped))
         self.addGestureRecognizer(tapGesture)
-        self.title?.font = UIFont.appFont(font: .RubikRegular, pontSize: 16)
+        self.title?.font = UIFont.appFont(font: .RubikRegular, pontSize: 14)
         self.title?.lineBreakMode = .byWordWrapping
     }
     

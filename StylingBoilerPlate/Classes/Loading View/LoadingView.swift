@@ -39,7 +39,7 @@ public class LoadingView: UIView {
     }
     
     //Service Response View
-    public func addServiceReponseView(delegate:ServiceResponseViewDelegate,top:CGFloat=0,bottom:CGFloat=0, isLight: Bool = false)  {
+    public func addServiceReponseView(delegate:ServiceResponseViewDelegate,top:CGFloat=0,bottom:CGFloat=0, isLight: Bool = true)  {
         createServiceResponseView(delegate:delegate,top:top,bottom:bottom, isLight: isLight)
     }
     
@@ -135,7 +135,7 @@ public class LoadingView: UIView {
     
     public func showReponseView(title: String?, msg: String?, img: UIImage?, hideRetryBtn: Bool, retryBtnTitle:String = "Try Again")  {
         if serviceResponseView != nil{
-            serviceResponseView?.showMessage(title: title, msg: msg, image: img, hideRetryButton: hideRetryBtn)
+            serviceResponseView?.showMessage(title: title, msg: msg, image: img, hideRetryButton: hideRetryBtn, btnTitle: retryBtnTitle)
             serviceResponseView?.btnRetry.setTitle(retryBtnTitle, for: .normal)
             serviceResponseView?.isHidden = false
         }

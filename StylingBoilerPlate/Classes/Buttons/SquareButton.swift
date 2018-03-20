@@ -24,7 +24,7 @@ public class SquareBotton: UIButton,Configurable {
     
     func config() {
         self.setImage(self.imageView?.image?.withRenderingMode(.alwaysOriginal), for: .normal)
-        
+        self.titleLabel?.font = UIFont.appFont(font: .RubikRegular, pontSize: 14)
         if hasTitle{
             self.setTitleColor(UIColor.appColor(color: .Dark), for: .normal)
             centerVertically()
@@ -43,14 +43,36 @@ public class SquareBotton: UIButton,Configurable {
         let titleSize = self.titleLabel!.frame.size;
         
         let totalHeight = (imageSize.height + titleSize.height + padding);
+        let dir = Locale.characterDirection(forLanguage: Locale.current.languageCode ?? "en")
         
-        self.imageEdgeInsets = UIEdgeInsetsMake(-(totalHeight - imageSize.height), CGFloat(0.0), CGFloat(0.0),
-                                                  -titleSize.width)
+        if dir == .rightToLeft{
+            self.imageEdgeInsets = UIEdgeInsetsMake(-(totalHeight - imageSize.height),
+                                                    -titleSize.width ,
+                                                    CGFloat(0.0),
+                                                    CGFloat(0.0))
+            
+            self.titleEdgeInsets = UIEdgeInsetsMake(CGFloat(0.0),
+                                                    CGFloat(0.0),
+                                                    -(totalHeight - titleSize.height),
+                                                    -imageSize.width)
+        }else{
+            self.imageEdgeInsets = UIEdgeInsetsMake(-(totalHeight - imageSize.height),
+                                                    CGFloat(0.0),
+                                                    CGFloat(0.0),
+                                                    -titleSize.width)
+            
+            self.titleEdgeInsets = UIEdgeInsetsMake(CGFloat(0.0),
+                                                    -imageSize.width,
+                                                    -(totalHeight - titleSize.height),
+                                                    CGFloat(0.0))
+        }
+     
         
-        self.titleEdgeInsets = UIEdgeInsetsMake(CGFloat(0.0), -imageSize.width, -(totalHeight - titleSize.height),
+        self.contentEdgeInsets = UIEdgeInsetsMake(CGFloat(0.0),
+                                                  CGFloat(0.0),
+                                                  titleSize.height,
                                                   CGFloat(0.0))
-        
-        self.contentEdgeInsets = UIEdgeInsetsMake(CGFloat(0.0), CGFloat(0.0), titleSize.height, CGFloat(0.0))
+
     }
 }
 

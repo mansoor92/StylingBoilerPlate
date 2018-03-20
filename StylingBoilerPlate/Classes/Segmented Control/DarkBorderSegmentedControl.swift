@@ -31,9 +31,9 @@ public class DarkBorderSegmentedControl: UISegmentedControl {
         if isLightBackground{
             normalTextColor = UIColor.appColor(color: .DarkText)
         }else{
-            normalTextColor = UIColor.appColor(color: .LightText)
+            normalTextColor = UIColor.appColor(color: .DarkText)
         }
-        sharpCornersStyle(normalBackgroudColor: UIColor.clear, selectedBackggroundColor: UIColor.appColor(color: .Secondary), tintColor: UIColor.appColor(color: .Secondary), normalTextColor: normalTextColor, selectedTextColor: UIColor.appColor(color: .Light))
+        sharpCornersStyle(normalBackgroudColor: UIColor.clear, selectedBackggroundColor: UIColor.appColor(color: .Primary), tintColor: UIColor.appColor(color: .Primary), normalTextColor: normalTextColor, selectedTextColor: UIColor.appColor(color: .Light))
     }
     
     func sharpCornersStyle(normalBackgroudColor:UIColor,selectedBackggroundColor:UIColor,tintColor:UIColor,normalTextColor: UIColor, selectedTextColor:UIColor) {

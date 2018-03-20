@@ -24,9 +24,11 @@ public class ToggleBottomTitleButton: UIButton, Configurable {
     private func toggleState(state:Bool){
         print("state:\(state)")
         if state {
-            self.tintColor = UIColor.appColor(color: .Secondary)
+            self.tintColor = UIColor.appColor(color: .Primary)
+            self.setTitleColor(UIColor.appColor(color: .Primary), for: .normal)
         }else {
             self.tintColor = UIColor.appColor(color: .Dark)
+            self.setTitleColor(UIColor.appColor(color: .Dark), for: .normal)
         }
     }
 
@@ -36,7 +38,8 @@ public class ToggleBottomTitleButton: UIButton, Configurable {
     }
     
     func config() {
-        self.setTitleColor(UIColor.appColor(color: .Dark), for: .normal)
+//        self.setTitleColor(UIColor.appColor(color: .Dark), for: .normal)
+        self.titleLabel?.font = UIFont.appFont(font: .RubikRegular, pontSize: 14)
         centerVertically()
         toggleState(state: stateSelected)
          self.addTarget(self, action: #selector(actionToggle), for: .touchUpInside)
@@ -52,14 +55,32 @@ public class ToggleBottomTitleButton: UIButton, Configurable {
         let titleSize = self.titleLabel!.frame.size;
         
         let totalHeight = (imageSize.height + titleSize.height + padding);
-        
-        self.imageEdgeInsets = UIEdgeInsetsMake(-(totalHeight - imageSize.height - padding - CGFloat(6.0)), CGFloat(0.0), CGFloat(0.0),
-                                                -titleSize.width)
-        
-        self.titleEdgeInsets = UIEdgeInsetsMake(CGFloat(0.0), -imageSize.width, -(totalHeight - titleSize.height + padding),
-                                                CGFloat(0.0))
-        
-        self.contentEdgeInsets = UIEdgeInsetsMake(CGFloat(0.0), CGFloat(0.0), titleSize.height - padding, CGFloat(0.0))
+        let dir = Locale.characterDirection(forLanguage: Locale.current.languageCode ?? "en")
+        if dir == .rightToLeft {
+            self.imageEdgeInsets = UIEdgeInsetsMake(-(totalHeight - imageSize.height - padding - CGFloat(6.0)), -titleSize.width, CGFloat(0.0), CGFloat(0.0)
+                                                    )
+            
+            self.titleEdgeInsets = UIEdgeInsetsMake(CGFloat(0.0), CGFloat(0.0), -(totalHeight - titleSize.height + padding),
+                                                    -imageSize.width)
+            
+            self.contentEdgeInsets = UIEdgeInsetsMake(CGFloat(0.0), CGFloat(0.0), titleSize.height - padding, CGFloat(0.0))
+            
+        }else{
+            self.imageEdgeInsets = UIEdgeInsetsMake(-(totalHeight - imageSize.height - padding - CGFloat(6.0)), CGFloat(0.0), CGFloat(0.0),
+                                                    -titleSize.width)
+            
+            self.titleEdgeInsets = UIEdgeInsetsMake(CGFloat(0.0), -imageSize.width, -(totalHeight - titleSize.height + padding),
+                                                    CGFloat(0.0))
+            
+            self.contentEdgeInsets = UIEdgeInsetsMake(CGFloat(0.0), CGFloat(0.0), titleSize.height - padding, CGFloat(0.0))
+        }
+//        self.imageEdgeInsets = UIEdgeInsetsMake(-(totalHeight - imageSize.height - padding - CGFloat(6.0)), CGFloat(0.0), CGFloat(0.0),
+//                                                -titleSize.width)
+//
+//        self.titleEdgeInsets = UIEdgeInsetsMake(CGFloat(0.0), -imageSize.width, -(totalHeight - titleSize.height + padding),
+//                                                CGFloat(0.0))
+//
+//        self.contentEdgeInsets = UIEdgeInsetsMake(CGFloat(0.0), CGFloat(0.0), titleSize.height - padding, CGFloat(0.0))
     }
 
     @objc private func actionToggle()  {

@@ -140,6 +140,9 @@ open class ResponseError {
             reason = "Not found"
         case 500:
             errorTitle = "Internal Server Error"
+        case 503:
+            errorTitle = "Service unavailable"
+            reason = "We're sorry, too many people are accessing server at the same time. We're working on this problem. Please try again later."
         case 422:
             errorTitle = "Unprocessable Entity"
             reason = "unable to process the contained instructions"
