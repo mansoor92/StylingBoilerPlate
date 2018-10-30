@@ -57,7 +57,7 @@ public class BorderLessSegmentedControl: UISegmentedControl {
         
         self.tintColor = tintColor
         
-        let img2 = UIImage.getImageFromColor(color: UIColor.appColor(color: .Secondary), size: CGSize(width: 1, height: self.frame.size.height))
+        let img2 = UIImage.getImageFromColor(color: selectedBackggroundColor, size: CGSize(width: 1, height: self.frame.size.height))
         self.setDividerImage(img2, forLeftSegmentState: .normal, rightSegmentState: .normal, barMetrics: .default)
         
         let titleTextAttributes = [NSForegroundColorAttributeName: selectedTextColor]
@@ -69,7 +69,7 @@ public class BorderLessSegmentedControl: UISegmentedControl {
         
         self.layer.borderWidth = 0
         self.layer.cornerRadius = 0
-        self.layer.borderColor = UIColor.appColor(color: .Secondary).cgColor
+        self.layer.borderColor = selectedBackggroundColor.cgColor
         
     }
     

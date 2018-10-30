@@ -20,9 +20,9 @@ public class ServiceResponseView: UIView, NibLoadableView, CustomView {
     @IBOutlet weak var labelError: TextLabel!
     @IBOutlet weak var btnRetry: UIButton!
     var v: UIView!
-    var delegate :ServiceResponseViewDelegate?
+    public var delegate :ServiceResponseViewDelegate?
     let bundle = Bundle(for: ServiceResponseView.classForCoder())
-    var isLight: Bool = false {
+    public var isLight: Bool = false {
         didSet{
           changeTheme(lightTheme: isLight)
         }
@@ -62,7 +62,7 @@ public class ServiceResponseView: UIView, NibLoadableView, CustomView {
         delegate?.actionRetry()
     }
     
-    func showMessage(title:String?, msg: String?, image: UIImage?, hideRetryButton: Bool, btnTitle: String) {
+    public func showMessage(title:String?, msg: String?, image: UIImage?, hideRetryButton: Bool, btnTitle: String) {
         labelTitle.text = title
         labelError.text = msg
         imageView.image = image?.withRenderingMode(.alwaysTemplate)
@@ -71,6 +71,7 @@ public class ServiceResponseView: UIView, NibLoadableView, CustomView {
         }else{
             btnRetry.isHidden = false
         }
+		btnRetry.setTitle(btnTitle, for: .normal)
     }//showMessage
 }
 

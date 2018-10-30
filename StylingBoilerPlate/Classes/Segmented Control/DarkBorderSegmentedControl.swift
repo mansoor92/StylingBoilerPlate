@@ -5,12 +5,12 @@ public class DarkBorderSegmentedControl: UISegmentedControl {
     @IBInspectable public var isLightBackground: Bool = false
      @IBInspectable public var cornerRadius: CGFloat = 5
     
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         setup()
     }
     
-    override init(items: [Any]?) {
+    override public init(items: [Any]?) {
         super.init(items: items)
         setup()
     }

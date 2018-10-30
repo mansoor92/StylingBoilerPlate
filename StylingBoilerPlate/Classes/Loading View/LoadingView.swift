@@ -19,9 +19,7 @@ public class LoadingView: UIView {
     private var serviceResponseView : ServiceResponseView?
     public var loadingMessage:String = "Loading..."
     private var loadingIsVisible = false
-//    private var mrProgressOverlay : MRProgressOverlayView!
     private var refreshControl : UIRefreshControl?
-//    var isShowingS
     private var pageLoadingView : PageLoadingView!
     
     private var refreshDelegate: RefreshControlDelegate?
@@ -63,13 +61,13 @@ public class LoadingView: UIView {
         return rControl
     }
     
-    public func addRefreshControl(tableView:UITableView,refreshTitle:String,controller:UIViewController, delegate: RefreshControlDelegate)  {
+    public func addRefreshControl(tableView:UITableView,refreshTitle:String,controller: UIViewController, delegate: RefreshControlDelegate)  {
         self.refreshDelegate = delegate
         refreshControl = createRefreshControl(controller: controller, title: refreshTitle)
         tableView.addSubview(refreshControl!)
     }
     
-    public func addRefreshControl(collectionView:UICollectionView,refreshTitle:String,controller:UIViewController, delegate: RefreshControlDelegate)  {
+    public func addRefreshControl(collectionView:UICollectionView,refreshTitle:String,controller: UIViewController, delegate: RefreshControlDelegate)  {
         self.refreshDelegate = delegate
         refreshControl = createRefreshControl(controller: controller, title: refreshTitle)
         collectionView.addSubview(refreshControl!)

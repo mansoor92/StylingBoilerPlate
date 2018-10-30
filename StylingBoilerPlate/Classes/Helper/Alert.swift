@@ -38,8 +38,8 @@ public class Alert{
     }
     
 
-    static public func showImagePickerAlert(viewController:UIViewController,actionPhotoLibrary:UIAlertAction,actionCamera:UIAlertAction,actionRemove:UIAlertAction? = nil)  {
-        let actionCancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+	static public func showImagePickerAlert(viewController:UIViewController,actionPhotoLibrary:UIAlertAction,actionCamera:UIAlertAction,actionRemove:UIAlertAction? = nil, cancelTitle: String = "Cancel")  {
+        let actionCancel = UIAlertAction(title: cancelTitle, style: .cancel, handler: nil)
         let alert = UIAlertController(title: "Choose photo using", message: nil, preferredStyle: .actionSheet)
         alert.addAction(actionCancel)
         alert.addAction(actionCamera)

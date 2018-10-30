@@ -45,6 +45,13 @@ public extension UITableView{
         }
         return cell
     }
+
+
+	public func scrollPecentage() -> CGFloat {
+		let height = self.contentSize.height - self.frame.size.height
+		let scrolledPercentage = self.contentOffset.y / height
+		return scrolledPercentage
+	}
 }
 
 

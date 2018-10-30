@@ -43,10 +43,10 @@ public class BottomBorderTextField: UITextField, Configurable{
     }
     
     func setupPlaceHolder() -> Void {
-        let attrPlaceholder = NSMutableAttributedString.init(string: self.placeholder!)
+        let attrPlaceholder = NSMutableAttributedString.init(string: self.placeholder ?? "")
         let font = UIFont.appFont(font: .RubikRegular, pontSize: 15)
         
-        attrPlaceholder.addAttributes([NSFontAttributeName:font, NSForegroundColorAttributeName:UIColor.appColor(color: .Medium)], range: NSMakeRange(0, placeholder!.characters.count))
+        attrPlaceholder.addAttributes([NSFontAttributeName:font, NSForegroundColorAttributeName:UIColor.appColor(color: .Medium)], range: NSMakeRange(0, placeholder?.characters.count ?? 0))
         
         self.attributedPlaceholder = attrPlaceholder
     }

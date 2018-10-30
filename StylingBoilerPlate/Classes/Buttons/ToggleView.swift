@@ -21,6 +21,10 @@ public class ToggleView: UIView, CustomView, NibLoadableView {
     
     public var state: Bool = false{
         didSet{
+			guard autoToggle else {
+				self.toggeable?.viewToggled(state: self.state, view: self)
+				return
+			}
             if self.state{
                 icon.image = selectedStateImg
                 self.title.text = selectedStateTitle
@@ -36,7 +40,8 @@ public class ToggleView: UIView, CustomView, NibLoadableView {
     public var unSelectedStateImg: UIImage?
     public var selectedStateTitle: String?
     public var unSelectedStateTitle: String?
-    
+    public var autoToggle = true
+
     override public required init(frame: CGRect) {
         super.init(frame: frame)
         contentView = commonInit(bundle: Bundle(for: ToggleView.classForCoder()))

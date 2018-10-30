@@ -26,15 +26,19 @@ public enum RegularExpressions: String{
      case password = ""
 }
 
-extension UITextField:Shakeable{
+extension UITextField: Shakeable{
     
     
     public func isValid(exp:RegularExpressions) -> Bool{
-        if let emailTest = NSPredicate(format:"SELF MATCHES %@", exp.rawValue) as NSPredicate? {
-            return emailTest.evaluate(with: self.text)
-        }
-        return false
+        return UITextField.isValid(text: self.text ?? "", forExp: exp)
     }
+
+	static public func isValid(text: String, forExp exp: RegularExpressions) -> Bool {
+		if let emailTest = NSPredicate(format:"SELF MATCHES %@", exp.rawValue) as NSPredicate? {
+			return emailTest.evaluate(with: text)
+		}
+		return false
+	}
 }
 
 extension UITextField{

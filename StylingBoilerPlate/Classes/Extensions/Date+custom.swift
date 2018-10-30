@@ -43,8 +43,8 @@ public extension Date{
         let month = "\(difference.month!)M" + " " + days
         
         if difference.month! > 0  { return month}
-        if difference.day!    > 0 { return days }
-        if difference.hour!   > 0 { return hours }
+        if difference.day!   > 0 { return days }
+        if difference.hour!  > 0 { return hours }
         if difference.minute! > 0 { return minutes }
         return ""
     }
@@ -83,4 +83,9 @@ public extension Date{
         let currentTimeString = dateFormater.string(from: date)
         return currentTimeString
     }
+	
+	static public var timeStamp: String {
+		let date = Date().timeIntervalSince1970
+		return "\(date)"
+	}
 }

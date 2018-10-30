@@ -13,12 +13,12 @@
 import Foundation
 import UIKit
 
-class PageLoadingView : UIView, NibLoadableView, CustomView{
+public class PageLoadingView : UIView, NibLoadableView, CustomView{
     
-    @IBOutlet var labelMsg: UILabel!
+    @IBOutlet public var labelMsg: UILabel!
     
     var contentView: UIView!
-     let bundle = Bundle(for: PageLoadingView.classForCoder())
+	let bundle = Bundle(for: PageLoadingView.classForCoder())
     override required public init(frame: CGRect) {
         super.init(frame: frame)
         contentView = commonInit(bundle: bundle)

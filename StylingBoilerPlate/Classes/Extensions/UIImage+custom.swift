@@ -56,46 +56,46 @@ public extension UIImage{
         
         return newImage
     }
+
+	public class func getImageFromColor(color: UIColor, size: CGSize) -> UIImage {
+		let rect = CGRect(x: 0,y: 0,width: size.width,height: size.height)
+		UIGraphicsBeginImageContextWithOptions(size, false, 0)
+		color.setFill()
+		UIRectFill(rect)
+		let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+		UIGraphicsEndImageContext()
+		return image
+	}
 }
 
 //MARK:- Scaling
 public extension UIImage{
-    
-    public class func getImageFromColor(color: UIColor, size: CGSize) -> UIImage {
-        let rect = CGRect(x: 0,y: 0,width: size.width,height: size.height)
-        UIGraphicsBeginImageContextWithOptions(size, false, 0)
-        color.setFill()
-        UIRectFill(rect)
-        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
-        UIGraphicsEndImageContext()
-        return image
-    }
-    
-    public class func scaleImage(image:UIImage,width:CGFloat)-> UIImage{
-        let ratio = image.size.width / image.size.height
-        let newHeight = width / ratio
-        let size = CGSize(width: width, height: newHeight)
-        return UIImage.scaleImage(image:image, size: size)
-    }
-    
-    public class func scaleImage(image:UIImage,height:CGFloat)-> UIImage{
-        let ratio = image.size.width / image.size.height
-        let newWidth = height * ratio
-        let size = CGSize(width: newWidth, height: height)
-        return UIImage.scaleImage(image:image, size: size)
-    }
-    
-    private class func scaleImage(image:UIImage,size:CGSize)->UIImage{
-        // This is the rect that we've calculated out and this is what is actually used below
-        let rect = CGRect(x:0,y: 0, width: size.width,height: size.height)
-        
-        // Actually do the resizing to the rect using the ImageContext stuff
-        UIGraphicsBeginImageContextWithOptions(size, false, 1.0)
-        image.draw(in:rect)
-        let newImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return newImage!
-    }
+
+	public class func scaleImage(image:UIImage,width:CGFloat)-> UIImage{
+		let ratio = image.size.width / image.size.height
+		let newHeight = width / ratio
+		let size = CGSize(width: width, height: newHeight)
+		return UIImage.scaleImage(image:image, size: size)
+	}
+	
+	public class func scaleImage(image:UIImage,height:CGFloat)-> UIImage{
+		let ratio = image.size.width / image.size.height
+		let newWidth = height * ratio
+		let size = CGSize(width: newWidth, height: height)
+		return UIImage.scaleImage(image:image, size: size)
+	}
+	
+	private class func scaleImage(image:UIImage,size:CGSize)->UIImage{
+		// This is the rect that we've calculated out and this is what is actually used below
+		let rect = CGRect(x:0,y: 0, width: size.width,height: size.height)
+		
+		// Actually do the resizing to the rect using the ImageContext stuff
+		UIGraphicsBeginImageContextWithOptions(size, false, 1.0)
+		image.draw(in:rect)
+		let newImage = UIGraphicsGetImageFromCurrentImageContext()
+		UIGraphicsEndImageContext()
+		return newImage!
+	}
 }
 
 //MARK:- Uploading
@@ -109,7 +109,6 @@ public extension UIImage{
         }
         return base64String!
     }
-
 }
 
 
