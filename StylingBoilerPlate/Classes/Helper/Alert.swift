@@ -10,7 +10,7 @@ import UIKit
 
 public class Alert{
 
-    static public func showMessage(viewController:UIViewController?,title:String? = nil,msg:String? = nil,actions:[UIAlertAction]? = nil,showOnlyDismissBtn:Bool=true,dismissBtnTitle:String = "Dismiss".localized()) {
+    static public func showMessage(viewController:UIViewController?,title:String? = nil,msg:String? = nil,actions:[UIAlertAction]? = nil,showOnlyDismissBtn:Bool=true, dismissBtnTitle: String) {
         
         guard viewController != nil else {
             return
@@ -19,7 +19,7 @@ public class Alert{
         viewController!.present(alert, animated: true, completion: nil)
     }//showError
     
-    static func createAlert(viewController:UIViewController?,title:String? = nil,msg:String? = nil,actions:[UIAlertAction]? = nil,showOnlyDismissBtn:Bool=true,dismissBtnTitle:String = "Dismiss".localized()) -> UIAlertController {
+    static func createAlert(viewController:UIViewController?,title:String? = nil,msg:String? = nil,actions:[UIAlertAction]? = nil,showOnlyDismissBtn:Bool=true, dismissBtnTitle: String) -> UIAlertController {
         let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
         
         //dismiss button check
@@ -38,9 +38,9 @@ public class Alert{
     }
     
 
-	static public func showImagePickerAlert(viewController:UIViewController,actionPhotoLibrary:UIAlertAction,actionCamera:UIAlertAction,actionRemove:UIAlertAction? = nil, cancelTitle: String = "Cancel".localized())  {
+	static public func showImagePickerAlert(viewController:UIViewController,actionPhotoLibrary:UIAlertAction,actionCamera:UIAlertAction,actionRemove:UIAlertAction? = nil, cancelTitle: String, title: String)  {
         let actionCancel = UIAlertAction(title: cancelTitle, style: .cancel, handler: nil)
-        let alert = UIAlertController(title: "Choose photo using".localized(), message: nil, preferredStyle: .actionSheet)
+        let alert = UIAlertController(title: title, message: nil, preferredStyle: .actionSheet)
         alert.addAction(actionCancel)
         alert.addAction(actionCamera)
         alert.addAction(actionPhotoLibrary)
