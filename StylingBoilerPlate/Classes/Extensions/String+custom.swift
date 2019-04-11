@@ -45,4 +45,8 @@ extension String{
             return height
         }
     }
+
+	func localized() -> String {
+		return NSLocalizedString(self, tableName: "Localizable", bundle: Bundle.stringsBundle, value: "ABC", comment: "Localized string")
+	}
 }
