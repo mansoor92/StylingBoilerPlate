@@ -47,6 +47,6 @@ extension String{
     }
 
 	func localized() -> String {
-		return NSLocalizedString(self, tableName: "Localizable", bundle: Bundle.stringsBundle, value: "ABC", comment: "Localized string")
+		return NSLocalizedString(self, tableName: "Localizable", bundle: Bundle.stylingBoilerPlateBundle, value: "ABC", comment: "Localized string")
 	}
 }

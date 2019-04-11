@@ -12,10 +12,4 @@ extension Bundle{
 	static var stylingBoilerPlateBundle: Bundle {
 		return Bundle(for: DashedBorderButton.classForCoder())
 	}
-
-	static var stringsBundle: Bundle {
-		let bundleResourcePath = Bundle.stylingBoilerPlateBundle.resourcePath!
-		let assetPath = bundleResourcePath.appending("/StylingBoilerPlaterAssets.bundle")
-		return Bundle(path: assetPath)!
-	}
 }
