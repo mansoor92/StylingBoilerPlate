@@ -23,6 +23,7 @@ class ViewController: UIViewController, ToggleViewDelegate{
     }
 
     func viewToggled(state: Bool, view: ToggleView) {
+		Alert.showMessage(viewController: self, title: "holla")
         if state{
             btnView.title.text = "Mehram Ride"
             btnView.title.numberOfLines = 2
